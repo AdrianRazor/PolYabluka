@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html.block {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.hidden {
+  display: none !important;
+}
