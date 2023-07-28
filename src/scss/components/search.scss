@@ -1,0 +1,43 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & input {
+    width: 0;
+    padding-bottom: 8px;
+    background-color: transparent;
+    border-bottom: 2px solid $white;
+
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 120%;
+    color: $white;
+
+    position: absolute;
+    top: 0;
+    right: 100%;
+    z-index: 5;
+
+    transition: 0.3s ease;
+
+    &:focus {
+      width: 210px;
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    background-color: $white;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    & input {
+      width: 210px;
+    }
+  }
+}

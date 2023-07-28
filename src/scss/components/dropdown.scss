@@ -1,16 +1,17 @@
 .dropdown {
   position: relative;
+  min-width: 78px;
 
   &__head {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 10px;
 
     cursor: pointer;
   }
 
-  &__icon,
-  &__current {
+  &__icon {
     background-color: $white;
     border-radius: 50%;
     flex-shrink: 0;
@@ -23,10 +24,26 @@
     }
   }
 
-  &__icon {
+  &__text {
+    line-height: 170%;
+    color: $white;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+
+  &__item {
     @media (any-hover: hover) {
       &:hover {
-        background-color: $aqua;
+        & .dropdown {
+          &__icon {
+            background-color: $aqua;
+          }
+
+          &__text {
+            color: $aqua;
+          }
+        }
       }
     }
   }
@@ -52,7 +69,7 @@
     &::before {
       content: "";
       display: block;
-      width: 66%;
+      width: 0%;
       height: 2px;
       background-color: $white;
 
@@ -61,6 +78,8 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
+
+      transition: 0.3s ease;
     }
   }
 
@@ -81,6 +100,12 @@
     & .dropdown {
       &__arrow {
         transform: rotate(-90deg);
+      }
+
+      &__wrapper {
+        &::before {
+          width: 70%;
+        }
       }
 
       &__body {

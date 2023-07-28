@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     dropdown.forEach((drop) => {
       const head = drop.querySelector(".dropdown__head");
       const current = drop.querySelector(".dropdown__current");
-      const icon = drop.querySelectorAll(".dropdown__icon");
+      const item = drop.querySelectorAll(".dropdown__item");
 
       if (head) {
         head.addEventListener("click", () => {
@@ -23,17 +23,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
       }
 
-      if (current && icon) {
-        icon.forEach((el) => {
+      if (current && item) {
+        item.forEach((el) => {
           el.addEventListener("click", () => {
-            const elUse = el.querySelector("use");
-            const elValue = elUse.getAttribute("xlink:href");
+            const icon = el.querySelector(".dropdown__icon");
+            const text = el.querySelector(".dropdown__text");
 
-            const currentUse = current.querySelector("use");
-            const currentValue = currentUse.getAttribute("xlink:href");
+            if (icon) {
+              const itemUse = icon.querySelector("use");
+              const itemValue = itemUse.getAttribute("xlink:href");
 
-            currentUse.setAttribute("xlink:href", elValue);
-            elUse.setAttribute("xlink:href", currentValue);
+              const currentUse = current.querySelector("use");
+              const currentValue = currentUse.getAttribute("xlink:href");
+
+              currentUse.setAttribute("xlink:href", itemValue);
+              itemUse.setAttribute("xlink:href", currentValue);
+            }
+
+            if (text) {
+              const itemValue = text.textContent;
+
+              const currentText = current.querySelector(".dropdown__text");
+              const currentValue = currentText.textContent;
+
+              currentText.textContent = itemValue;
+              text.textContent = currentValue;
+            }
 
             drop.classList.remove("open");
           });

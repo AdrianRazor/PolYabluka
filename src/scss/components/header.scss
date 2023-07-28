@@ -3,14 +3,53 @@
     padding: 25px 0;
     background-color: $black;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__dropdowns {
     display: flex;
+    align-items: center;
     gap: 25px;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & a {
+      color: $white;
+      transition: 0.2s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $aqua;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $white;
+
+    transition: 0.2s ease;
+
+    & svg {
+      fill: $black;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $aqua;
+      }
+    }
   }
 
   &__bottom {
