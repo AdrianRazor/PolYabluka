@@ -1,0 +1,113 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__item {
+    & a {
+      color: $black;
+    }
+
+    & > a {
+      position: relative;
+      display: block;
+      padding: 37px 0;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $aqua;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 5;
+
+        transform: translateX(-50%);
+        transition: 0.3s ease;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          &::after {
+            width: 110%;
+          }
+        }
+      }
+    }
+  }
+
+  &__sub {
+    width: 100%;
+    padding: 30px $desktop-padding;
+    background-color: #ededed;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+
+    &-list {
+      max-width: 260px;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      & > a {
+        display: block;
+        width: 100%;
+        padding: 10px 0 8px;
+
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease;
+
+        @media (any-hover: hover) {
+          &:hover {
+            border-bottom-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__end {
+    width: calc(100% - ($desktop-padding + 260px));
+    height: 100%;
+    padding: 40px $desktop-padding 40px 40px;
+    background: $white;
+
+    position: absolute;
+    top: 0;
+    left: calc($desktop-padding + 260px);
+    z-index: 5;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px 25px;
+    }
+
+    &-link {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    grid-row: span 2;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+}

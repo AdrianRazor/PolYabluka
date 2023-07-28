@@ -2,12 +2,12 @@
   &__top {
     padding: 25px 0;
     background-color: $black;
+  }
 
-    &-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__dropdowns {
@@ -53,6 +53,52 @@
   }
 
   &__bottom {
+    position: relative;
+    background-color: $light;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & a {
+      position: relative;
+      display: block;
+
+      & svg {
+        fill: $black;
+        transition: 0.2s ease;
+      }
+
+      & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $aqua;
+
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        z-index: 5;
+
+        font-weight: 700;
+        font-size: 18px;
+        color: $white;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          & svg {
+            fill: $aqua;
+          }
+        }
+      }
+    }
   }
 }
 

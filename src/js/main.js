@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const dropdown = document.querySelectorAll(".dropdown");
   if (dropdown) {
     dropdown.forEach((drop) => {
+      const wrapper = drop.querySelector(".dropdown__wrapper");
+      const body = drop.querySelector(".dropdown__body");
       const head = drop.querySelector(".dropdown__head");
       const current = drop.querySelector(".dropdown__current");
       const item = drop.querySelectorAll(".dropdown__item");
@@ -13,12 +15,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         head.addEventListener("click", () => {
           if (drop.classList.contains("open")) {
             drop.classList.remove("open");
+            wrapper.style.height = 0;
           } else {
             dropdown.forEach((drops) => {
               drops.classList.remove("open");
+              wrapper.style.height = 0;
             });
 
             drop.classList.add("open");
+            wrapper.style.height = `${body.scrollHeight}px`;
           }
         });
       }
@@ -58,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       window.addEventListener("click", (e) => {
         if (!e.target.closest(".dropdown")) {
           drop.classList.remove("open");
+          wrapper.style.height = 0;
         }
       });
     });
