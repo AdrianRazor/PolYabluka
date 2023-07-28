@@ -1,4 +1,20 @@
 .header {
+  &__top {
+    padding: 25px 0;
+    background-color: $black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dropdowns {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__bottom {
+  }
 }
 
 // @media (max-width: 767px) {

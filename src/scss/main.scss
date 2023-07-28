@@ -1,17 +1,22 @@
-@import "utils/variables.scss";
-@import "utils/mixins.scss";
-
+@import "base/variables.scss";
 @import "base/fonts.scss";
 @import "base/reset.scss";
 @import "base/global.scss";
 
-@import "components/btn.scss";
-@import "components/container.scss";
-@import "components/footer.scss";
-@import "components/header.scss";
 @import "components/main.scss";
-@import "components/logo.scss";
-@import "components/text.scss";
+@import "components/container.scss";
+
 @import "components/title.scss";
+@import "components/headline.scss";
+@import "components/text.scss";
+@import "components/btn.scss";
+@import "components/logo.scss";
+
+@import "components/header.scss";
+@import "components/footer.scss";
+
+@import "components/dropdown.scss";
+@import "components/pagination.scss";
 
 @import "blocks/start.scss";
+@import "blocks/news.scss";

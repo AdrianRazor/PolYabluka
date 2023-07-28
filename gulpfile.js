@@ -4,7 +4,6 @@ import browserSync from "browser-sync";
 import concat from "gulp-concat";
 import cssnano from "gulp-cssnano";
 import del from "del";
-import imagemin from "gulp-imagemin";
 import sass from "gulp-dart-sass";
 import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
@@ -44,7 +43,6 @@ export function js() {
 export function img() {
   return gulp
     .src("src/img/**/*")
-    .pipe(imagemin())
     .pipe(gulp.dest("dist/img/"))
     .pipe(browserSync.stream());
 }
