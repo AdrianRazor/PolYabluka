@@ -1,4 +1,45 @@
 .footer {
+  background-color: $black;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 0;
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__catalog {
+  }
+
+  &__info {
+  }
+
+  &__contacts {
+  }
+
+  &__phone {
+  }
+
+  &__mail {
+  }
+
+  &__icon {
+  }
+
+  &__copyright {
+    padding: 30px 0;
+    background-color: #101010;
+
+    & p {
+      color: $grey;
+      text-align: center;
+    }
+  }
 }
 
 // @media (max-width: 767px) {

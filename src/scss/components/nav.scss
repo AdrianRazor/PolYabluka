@@ -39,6 +39,15 @@
         }
       }
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        & .nav__sub {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__sub {
@@ -50,6 +59,10 @@
     top: 100%;
     left: 0;
     z-index: 10;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
 
     &-list {
       max-width: 260px;
@@ -74,6 +87,15 @@
           }
         }
       }
+
+      @media (any-hover: hover) {
+        &:hover {
+          & .nav__end {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
@@ -88,6 +110,10 @@
     left: calc($desktop-padding + 260px);
     z-index: 5;
 
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease;
+
     &-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -98,6 +124,14 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 20px;
+
+      @media (any-hover: hover) {
+        &:hover {
+          & .headline {
+            color: $aqua;
+          }
+        }
+      }
     }
   }
 
