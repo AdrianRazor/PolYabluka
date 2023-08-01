@@ -109,5 +109,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     splidePopular.mount();
   }
 
+  if (document.querySelector(".splideGoods")) {
+    var splideGoods = new Splide(".splideGoods", {
+      type: "loop",
+      perPage: 4,
+      gap: 30,
+      pagination: false,
+
+      breakpoints: {
+        1279: {
+          perPage: 2,
+          gap: 15,
+        },
+      },
+    });
+    splideGoods.mount();
+  }
+
   console.log("DOM fully loaded and parsed");
 });

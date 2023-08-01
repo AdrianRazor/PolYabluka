@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  background-color: $white;
+
+  &__img {
+    padding: 15px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__status {
+    padding: 10px;
+    border-radius: 99px;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 5;
+
+    font-weight: 400;
+    color: $white;
+
+    &--green {
+      background-color: $green;
+    }
+
+    &--blue {
+      background-color: $blue;
+    }
+  }
+
+  &__info {
+  }
+
+  &__headline {
+  }
+
+  &__price {
+  }
+
+  &__buttons {
+  }
+
+  &__btn {
+    &--cart {
+    }
+
+    &--compare {
+    }
+  }
+}

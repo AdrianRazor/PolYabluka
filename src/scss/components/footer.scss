@@ -2,33 +2,85 @@
   background-color: $black;
 
   &__wrapper {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 50px 0;
   }
 
+  & h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: $white;
+  }
+
   &__list {
+    margin-top: 35px;
   }
 
-  &__item {
-  }
+  &__item a {
+    font-size: 21px;
+    line-height: 145%;
+    color: $grey;
 
-  &__catalog {
-  }
+    transition: 0.2s ease;
 
-  &__info {
-  }
-
-  &__contacts {
+    &:hover {
+      color: $aqua;
+    }
   }
 
   &__phone {
+    display: block;
+    margin-top: 35px;
+
+    font-weight: 700;
+    font-size: 26px;
+    color: $white;
+
+    & span {
+      display: block;
+      font-weight: 400;
+      font-size: 21px;
+    }
   }
 
   &__mail {
+    display: block;
+    margin-top: 20px;
+
+    color: $white;
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 30px;
   }
 
   &__icon {
+    display: block;
+    border-radius: 50%;
+    background-color: $white;
+
+    transition: 0.2s ease;
+
+    & svg {
+      fill: $black;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $aqua;
+      }
+    }
+  }
+
+  &__chat {
+    position: absolute;
+    bottom: 50px;
+    right: -150px;
   }
 
   &__copyright {
@@ -42,7 +94,12 @@
   }
 }
 
-// @media (max-width: 767px) {
-//   .footer {
-//   }
-// }
+@media (max-width: 1599px) {
+  .footer {
+    &__chat {
+      position: absolute;
+      bottom: 50px;
+      right: -30px;
+    }
+  }
+}

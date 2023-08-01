@@ -1,0 +1,36 @@
+.chat {
+  &__btn {
+    border-radius: 50%;
+    background-color: $aqua;
+    border: 2px solid transparent;
+
+    transition: 0.2s ease;
+
+    & svg {
+      fill: $white;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      background-color: $white;
+      border-color: $aqua;
+
+      & svg {
+        fill: $aqua;
+      }
+    }
+  }
+
+  &.active {
+    & .chat {
+      &__btn {
+        background-color: $white;
+        border-color: $aqua;
+
+        & svg {
+          fill: $aqua;
+        }
+      }
+    }
+  }
+}

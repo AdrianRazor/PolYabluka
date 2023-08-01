@@ -1,0 +1,22 @@
+.card-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  &__img {
+    display: block;
+    background-color: $black;
+    aspect-ratio: 1 / 1;
+
+    transition: 0.3s ease;
+
+    & img {
+      object-fit: contain;
+    }
+
+    &:hover {
+      background-color: $aqua;
+    }
+  }
+}
