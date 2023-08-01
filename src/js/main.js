@@ -69,5 +69,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // splide
+  if (document.querySelector(".splideStart")) {
+    var splideStart = new Splide(".splideStart", {
+      type: "loop",
+      height: 550,
+      arrows: false,
+      breakpoints: {
+        1023: {
+          height: 370,
+        },
+        767: {
+          height: 230,
+        },
+      },
+    });
+    splideStart.mount();
+  }
+
   console.log("DOM fully loaded and parsed");
 });

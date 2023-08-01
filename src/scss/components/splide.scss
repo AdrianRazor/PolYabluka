@@ -1,0 +1,30 @@
+.splide {
+  &__pagination {
+    bottom: 25px;
+
+    &__page {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      margin: 5px;
+
+      &.is-active {
+        transform: scale(1.2);
+        background-color: $aqua;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .splide {
+    &__pagination {
+      bottom: 15px;
+
+      &__page {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
