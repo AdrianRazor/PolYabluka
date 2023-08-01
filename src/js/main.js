@@ -69,6 +69,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // chat
+  const chat = document.querySelector(".chat");
+  if (chat) {
+    const chatBtn = chat.querySelector(".chat__btn");
+
+    chatBtn.addEventListener("click", () => {
+      chat.classList.toggle("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (!e.target.closest(".chat.open")) {
+        chat.classList.remove("open");
+      }
+    });
+  }
+
+  // active buttons
+  const cardBtn = document.querySelectorAll(".card__btn");
+  if (cardBtn) {
+    setActiveClass(cardBtn);
+  }
+
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {
@@ -113,17 +135,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var splideGoods = new Splide(".splideGoods", {
       type: "loop",
       perPage: 4,
+      perMove: 4,
       gap: 30,
       pagination: false,
 
       breakpoints: {
         1279: {
           perPage: 2,
+          perMove: 2,
           gap: 15,
         },
       },
     });
     splideGoods.mount();
+  }
+
+  function setActiveClass(element) {
+    element.forEach((el) => {
+      el.addEventListener("click", () => {
+        el.classList.toggle("active");
+      });
+    });
   }
 
   console.log("DOM fully loaded and parsed");
