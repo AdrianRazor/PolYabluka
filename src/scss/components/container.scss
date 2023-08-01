@@ -5,7 +5,9 @@
   padding: 0 30px;
 }
 
-// @media (max-width: 767px) {
-//   .container {
-//   }
-// }
+@media (max-width: 1279px) {
+  .container {
+    max-width: 800px;
+    padding: 0 15px;
+  }
+}

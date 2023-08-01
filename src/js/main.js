@@ -87,5 +87,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
     splideStart.mount();
   }
 
+  if (document.querySelector(".splidePopular")) {
+    var splidePopular = new Splide(".splidePopular", {
+      type: "loop",
+      perPage: 2,
+      width: 280,
+      gap: 15,
+      pagination: false,
+
+      mediaQuery: "min",
+      breakpoints: {
+        1280: {
+          destroy: true,
+        },
+        768: {
+          width: 560,
+          gap: 20,
+        },
+      },
+    });
+    splidePopular.mount();
+  }
+
   console.log("DOM fully loaded and parsed");
 });

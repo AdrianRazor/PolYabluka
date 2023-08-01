@@ -1,4 +1,6 @@
 .splide {
+  margin: 0 auto;
+
   &__pagination {
     bottom: 25px;
 
@@ -13,6 +15,45 @@
         background-color: $aqua;
       }
     }
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    opacity: 1;
+
+    &--prev {
+      left: -60px;
+    }
+
+    &--next {
+      right: -60px;
+    }
+
+    & svg {
+      width: 32px;
+      height: 32px;
+      fill: $black;
+
+      transition: 0.2s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        & svg {
+          fill: $aqua;
+        }
+      }
+    }
+  }
+}
+
+.splidePopular {
+  &.is-initialized:not(.is-active) .splide__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 
