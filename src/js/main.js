@@ -160,6 +160,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     splideGoods.mount();
   }
 
+  if (document.querySelector(".splideTestimonials")) {
+    var splideTestimonials = new Splide(".splideTestimonials", {
+      type: "loop",
+      height: 430,
+      perPage: 3,
+      perMove: 3,
+      gap: 30,
+      pagination: false,
+
+      breakpoints: {
+        1279: {
+          perPage: 2,
+          perMove: 2,
+          gap: 15,
+        },
+      },
+    });
+    splideTestimonials.mount();
+  }
+
   function setActiveClass(element) {
     element.forEach((el) => {
       el.addEventListener("click", () => {
