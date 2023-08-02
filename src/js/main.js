@@ -69,6 +69,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // read more
+  const servicesText = document.querySelector(".services__box .text.hidden");
+  const servicesBtn = document.querySelector(".services__btn");
+  if (servicesText && servicesBtn) {
+    servicesBtn.addEventListener("click", () => {
+      servicesText.classList.toggle("hidden");
+      servicesBtn.classList.toggle("active");
+    });
+  }
+
   // chat
   const chat = document.querySelector(".chat");
   if (chat) {
