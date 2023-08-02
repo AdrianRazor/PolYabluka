@@ -1,7 +1,7 @@
 .comment {
   position: relative;
   height: 100%;
-  padding: 20px;
+  padding: 20px 20px 25px;
 
   display: flex;
   flex-direction: column;
@@ -73,6 +73,7 @@
     position: relative;
     display: block;
     font-weight: 400;
+    color: $black;
 
     &::after {
       content: "";

@@ -1,6 +1,31 @@
 document.addEventListener("DOMContentLoaded", function (event) {
   const root = document.documentElement;
 
+  // header
+  const header = document.querySelector(".header__mobile");
+  const burger = document.querySelector(".header__burger");
+  if (burger && header) {
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      header.classList.toggle("open");
+    });
+
+    const headerClose = document.querySelector(".header__close");
+    if (headerClose) {
+      headerClose.addEventListener("click", () => {
+        burger.classList.remove("active");
+        header.classList.remove("open");
+      });
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("header__mobile")) {
+        burger.classList.remove("active");
+        header.classList.remove("open");
+      }
+    });
+  }
+
   // dropdown
   const dropdown = document.querySelectorAll(".dropdown");
   if (dropdown) {
