@@ -3,9 +3,9 @@
   margin-bottom: 60px;
 
   &__links {
-    height: 790px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 380px;
     gap: 30px;
   }
 
@@ -159,6 +159,71 @@
       & svg {
         fill: $aqua;
         transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .services {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &__links {
+      grid-template-columns: initial;
+      grid-auto-rows: 380px;
+      gap: 20px;
+    }
+
+    &__link {
+      &:nth-of-type(2) {
+        order: 1;
+      }
+    }
+
+    &__article {
+      margin-top: 20px;
+      padding-top: 40px;
+    }
+
+    &__box {
+      column-count: initial;
+      column-gap: initial;
+    }
+
+    &__btn {
+      margin: 20px auto 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .services {
+    &__links {
+      grid-auto-rows: 180px;
+      gap: 10px;
+    }
+
+    &__article {
+      padding-top: 20px;
+    }
+
+    &__title {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    &__box {
+      & p + p {
+        margin-top: 15px;
+      }
+    }
+
+    &__btn {
+      margin: 15px auto 0;
+
+      & svg {
+        width: 10px;
+        height: 6px;
       }
     }
   }
