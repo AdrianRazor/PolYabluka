@@ -125,3 +125,57 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .card {
+    &__img {
+      padding: 10px;
+    }
+
+    &__status {
+      padding: 6px;
+
+      top: 15px;
+      right: 15px;
+    }
+
+    &__info {
+      padding: 0 10px 10px;
+    }
+
+    &__headline {
+      &-box {
+        height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__price {
+      height: 28px;
+      margin-bottom: 10px;
+
+      & span {
+        font-size: 9px;
+      }
+    }
+
+    &__btn {
+      height: 30px;
+      border-width: 1px 1px 1px 0;
+
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &--cart {
+        width: calc(30px + 10px);
+        margin-left: -10px;
+      }
+
+      &--compare {
+        width: 30px;
+      }
+    }
+  }
+}
