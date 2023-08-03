@@ -205,9 +205,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       breakpoints: {
         1279: {
-          perPage: 2,
-          perMove: 2,
-          gap: 15,
+          width: "82%",
+          height: "auto",
+          perPage: 1,
+          perMove: 1,
         },
       },
     });
