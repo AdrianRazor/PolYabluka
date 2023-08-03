@@ -1,0 +1,53 @@
+.breadcrumbs {
+  margin-bottom: 40px;
+
+  & span {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+
+    & > span {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      &:not(:first-of-type) {
+        &::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 1px solid $black;
+          border-width: 1px 1px 0 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  & a {
+    font-size: 21px;
+    color: $black;
+  }
+
+  &__last {
+    font-size: 21px;
+    color: $aqua;
+  }
+}
+
+@media (max-width: 1279px) {
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    & a,
+    &__last {
+      font-size: 14px;
+    }
+  }
+}

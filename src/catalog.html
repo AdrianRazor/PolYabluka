@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="libs/splide.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Главная</title>
+    <title>Каталог</title>
   </head>
 
   <body>
@@ -424,234 +423,297 @@
     </header>
 
     <main class="main">
-      <section class="start">
-        <div class="splide splideStart">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="img/img-3.jpg" alt="banner" />
-              </li>
-              <li class="splide__slide">
-                <img src="img/img-3.jpg" alt="banner" />
-              </li>
-              <li class="splide__slide">
-                <img src="img/img-3.jpg" alt="banner" />
-              </li>
-              <li class="splide__slide">
-                <img src="img/img-3.jpg" alt="banner" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="popular">
-        <div class="container popular__container">
-          <h2 class="title title--center popular__title">
-            Популярні категорії
-          </h2>
-          <div class="splide splidePopular">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <a href="#" class="card-mini">
-                    <div class="card-mini__img">
-                      <img src="img/img-4.png" alt="product" />
-                    </div>
-                    <h3 class="headline">iPhone</h3>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a href="#" class="card-mini">
-                    <div class="card-mini__img">
-                      <img src="img/img-5.png" alt="product" />
-                    </div>
-                    <h3 class="headline">iPad</h3>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a href="#" class="card-mini">
-                    <div class="card-mini__img">
-                      <img src="img/img-6.png" alt="product" />
-                    </div>
-                    <h3 class="headline">MacBook</h3>
-                  </a>
-                </li>
-                <li class="splide__slide">
-                  <a href="#" class="card-mini">
-                    <div class="card-mini__img">
-                      <img src="img/img-7.png" alt="product" />
-                    </div>
-                    <h3 class="headline">Aксесуари</h3>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="popular__banner">
-            <img src="img/img-8.jpg" alt="banner" />
-          </div>
-        </div>
-      </section>
-
-      <section class="goods">
+      <section class="catalog">
         <div class="container">
-          <h2 class="title title--center goods__title">Популярні товари</h2>
-          <div class="splide splideGoods">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <div class="card">
-                    <a href="#" class="card__img">
-                      <img src="img/img-8.png" alt="product" />
+          <ul class="breadcrumbs">
+            <span>
+              <span>
+                <a href="#">Головна</a>
+              </span>
+              <span>
+                <a href="#">Каталог товарів</a>
+              </span>
+              <span>
+                <a href="#">Iphone</a>
+              </span>
+              <span class="breadcrumbs__last" aria-current="page">
+                Iphone 14 Pro Max
+              </span>
+            </span>
+          </ul>
+          <h1 class="title catalog__title">
+            Актуальні моделі Apple iPhone 14 pro max
+          </h1>
+          <div class="catalog__wrapper">
+            <aside class="catalog__filters"></aside>
+            <div class="catalog__grid">
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-8.png" alt="product" />
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple iPhone 13 Pro 128GB Gold
                     </a>
-                    <div class="card__info">
-                      <div class="card__headline-box">
-                        <a href="#" class="text card__headline">
-                          Apple iPhone 13 Pro 128GB Gold
-                        </a>
-                      </div>
-                      <div class="card__price">
-                        <p class="headline">43 120 грн</p>
-                      </div>
-                      <div class="card__buttons">
-                        <button class="card__btn card__btn--cart">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#cart"></use>
-                          </svg>
-                        </button>
-                        <button class="card__btn card__btn--compare">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#compare"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
                   </div>
-                </li>
-                <li class="splide__slide">
-                  <div class="card">
-                    <a href="#" class="card__img">
-                      <img src="img/img-9.png" alt="product" />
-                      <span class="card__status card__status--green">
-                        Акція
-                      </span>
+                  <div class="card__price">
+                    <p class="headline">43 120 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-9.png" alt="product" />
+                  <span class="card__status card__status--green"> Акція </span>
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple iPhone 13 Pro 256GB Gold
                     </a>
-                    <div class="card__info">
-                      <div class="card__headline-box">
-                        <a href="#" class="text card__headline">
-                          Apple iPhone 13 Pro 256GB Gold
-                        </a>
-                      </div>
-                      <div class="card__price">
-                        <span>55 600 грн</span>
-                        <p class="headline">48 900 грн</p>
-                      </div>
-                      <div class="card__buttons">
-                        <button class="card__btn card__btn--cart">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#cart"></use>
-                          </svg>
-                        </button>
-                        <button class="card__btn card__btn--compare">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#compare"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
                   </div>
-                </li>
-                <li class="splide__slide">
-                  <div class="card">
-                    <a href="#" class="card__img">
-                      <img src="img/img-10.png" alt="product" />
+                  <div class="card__price">
+                    <span>55 600 грн</span>
+                    <p class="headline">48 900 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-10.png" alt="product" />
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Чохол для iPhone 11 Pro Max Spigen Pro Max Spigen
                     </a>
-                    <div class="card__info">
-                      <div class="card__headline-box">
-                        <a href="#" class="text card__headline">
-                          Чохол для iPhone 11 Pro Max Spigen Pro Max Spigen
-                        </a>
-                      </div>
-                      <div class="card__price">
-                        <p class="headline">600 грн</p>
-                      </div>
-                      <div class="card__buttons">
-                        <button class="card__btn card__btn--cart">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#cart"></use>
-                          </svg>
-                        </button>
-                        <button class="card__btn card__btn--compare">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#compare"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
                   </div>
-                </li>
-                <li class="splide__slide">
-                  <div class="card">
-                    <a href="#" class="card__img">
-                      <img src="img/img-11.png" alt="product" />
-                      <span class="card__status card__status--blue"> ТОП </span>
+                  <div class="card__price">
+                    <p class="headline">600 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-11.png" alt="product" />
+                  <span class="card__status card__status--blue"> ТОП </span>
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple AirPods Pro with MagSafe Apple AirPods Pro with
+                      MagSafe
                     </a>
-                    <div class="card__info">
-                      <div class="card__headline-box">
-                        <a href="#" class="text card__headline">
-                          Apple AirPods Pro with MagSafe Apple AirPods Pro with
-                          MagSafe
-                        </a>
-                      </div>
-                      <div class="card__price">
-                        <p class="headline">8 800 грн</p>
-                      </div>
-                      <div class="card__buttons">
-                        <button class="card__btn card__btn--cart">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#cart"></use>
-                          </svg>
-                        </button>
-                        <button class="card__btn card__btn--compare">
-                          <svg width="40" height="40">
-                            <use xlink:href="img/sprite.svg#compare"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
                   </div>
-                </li>
-              </ul>
+                  <div class="card__price">
+                    <p class="headline">8 800 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-8.png" alt="product" />
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple iPhone 13 Pro 128GB Gold
+                    </a>
+                  </div>
+                  <div class="card__price">
+                    <p class="headline">43 120 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-9.png" alt="product" />
+                  <span class="card__status card__status--green"> Акція </span>
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple iPhone 13 Pro 256GB Gold
+                    </a>
+                  </div>
+                  <div class="card__price">
+                    <span>55 600 грн</span>
+                    <p class="headline">48 900 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-10.png" alt="product" />
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Чохол для iPhone 11 Pro Max Spigen Pro Max Spigen
+                    </a>
+                  </div>
+                  <div class="card__price">
+                    <p class="headline">600 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-11.png" alt="product" />
+                  <span class="card__status card__status--blue"> ТОП </span>
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple AirPods Pro with MagSafe Apple AirPods Pro with
+                      MagSafe
+                    </a>
+                  </div>
+                  <div class="card__price">
+                    <p class="headline">8 800 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#" class="card__img">
+                  <img src="img/img-9.png" alt="product" />
+                  <span class="card__status card__status--green"> Акція </span>
+                </a>
+                <div class="card__info">
+                  <div class="card__headline-box">
+                    <a href="#" class="text card__headline">
+                      Apple iPhone 13 Pro 256GB Gold
+                    </a>
+                  </div>
+                  <div class="card__price">
+                    <span>55 600 грн</span>
+                    <p class="headline">48 900 грн</p>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="card__btn card__btn--cart">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                    <button class="card__btn card__btn--compare">
+                      <svg width="40" height="40">
+                        <use xlink:href="img/sprite.svg#compare"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <a href="catalog.html" class="btn btn--black goods__btn">
-            Переглянути більше
-          </a>
         </div>
       </section>
 
       <section class="services">
         <div class="container">
-          <div class="services__links">
-            <a href="#" class="services__link">
-              <h3 class="title title--center">trade in</h3>
-              <img src="img/img-12.png" alt="trade in" />
-              <img src="img/img-13.png" alt="trade in" />
-            </a>
-            <a href="#" class="services__link">
-              <h3 class="title title--center">Лазерне гравіювання</h3>
-              <img src="img/img-14.png" alt="trade in" />
-            </a>
-            <a href="#" class="services__link">
-              <h3 class="title title--center">Ремонт</h3>
-              <img src="img/img-15.png" alt="trade in" />
-            </a>
-          </div>
           <div class="services__article">
-            <h2 class="title services__title services__title--center">
-              <span>PolYabluka</span> - Більше ніж інтернет-магазин
+            <h2 class="title services__title">
+              Чому варто купити Apple iPhone 14 Pro у 2023 році?
             </h2>
+            <div class="services__img">
+              <img src="img/img-17.jpg" alt="article" />
+            </div>
             <div class="services__box">
               <p class="text">
                 Ми знайдемо для вас саме ту бажану модель з потрібним кольором,
@@ -689,74 +751,6 @@
                 <use xlink:href="img/sprite.svg#arrowDown"></use>
               </svg>
             </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonials">
-        <div class="container">
-          <h2 class="title title--center testimonials__title">
-            Що про нас кажуть?
-          </h2>
-          <div class="splide splideTestimonials">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <div class="comment">
-                    <div class="comment__head">
-                      <div class="comment__img">
-                        <img src="img/img-16.jpg" alt="avatar" />
-                      </div>
-                      <h3 class="headline">Анна Іванченко</h3>
-                    </div>
-                    <p class="text comment__text">
-                      Замовляла чохол для iPhone 14 Pro. Дуже задоволена
-                      покупкою. Все підійшло ідеально. Чохол красивий, гарної
-                      якості, приємно тримати в руці. MagSafe працює.
-                    </p>
-                    <div class="comment__bottom">
-                      <p class="comment__date">08.04.2023</p>
-                      <a href="#" class="comment__link">iPhone 14 Pro</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="splide__slide">
-                  <div class="comment">
-                    <div class="comment__head">
-                      <div class="comment__img">
-                        <img src="img/img-16.jpg" alt="avatar" />
-                      </div>
-                      <h3 class="headline">Анна Іванченко</h3>
-                    </div>
-                    <p class="text comment__text">
-                      Замовляла чохол для iPhone 14 Pro. Дуже задоволена
-                      покупкою.
-                    </p>
-                    <div class="comment__bottom">
-                      <p class="comment__date">08.04.2023</p>
-                      <a href="#" class="comment__link">iPhone 14 Pro</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="splide__slide">
-                  <div class="comment">
-                    <div class="comment__head">
-                      <div class="comment__img">
-                        <img src="img/img-16.jpg" alt="avatar" />
-                      </div>
-                      <h3 class="headline">Анна Іванченко</h3>
-                    </div>
-                    <p class="text comment__text">
-                      Замовляла чохол для iPhone 14 Pro. Дуже задоволена
-                    </p>
-                    <div class="comment__bottom">
-                      <p class="comment__date">08.04.2023</p>
-                      <a href="#" class="comment__link">iPhone 14 Pro</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -884,7 +878,6 @@
       </div>
     </footer>
 
-    <script src="libs/splide.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
