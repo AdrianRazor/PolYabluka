@@ -11,8 +11,8 @@
   text-transform: uppercase;
 }
 
-// @media (max-width: 767px) {
-//   .title {
-//     font-size: 32px;
-//   }
-// }
+@media (max-width: 767px) {
+  .title {
+    font-size: 18px;
+  }
+}

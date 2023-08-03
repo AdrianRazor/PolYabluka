@@ -1,5 +1,5 @@
 .popular {
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 30px;
 
   &__title {
@@ -8,7 +8,36 @@
   }
 
   &__banner {
-    height: 245px;
     margin-top: 70px;
+    aspect-ratio: 4.65 / 1;
+  }
+}
+
+@media (max-width: 1279px) {
+  .popular {
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    &__container {
+      max-width: initial;
+    }
+
+    &__banner {
+      margin: 50px -15px 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .popular {
+    margin-top: 30px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__banner {
+      margin: 30px -15px 0;
+    }
   }
 }

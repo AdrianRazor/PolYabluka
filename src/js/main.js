@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       height: 550,
       arrows: false,
       breakpoints: {
-        1023: {
+        1279: {
           height: 370,
         },
         767: {
@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   if (document.querySelector(".splidePopular")) {
     var splidePopular = new Splide(".splidePopular", {
       type: "loop",
-      perPage: 2,
-      width: 280,
+      perPage: 1,
+      width: 200,
       gap: 15,
       pagination: false,
 
@@ -159,6 +159,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         },
         768: {
           width: 560,
+        },
+        375: {
+          perPage: 2,
+          width: 280,
           gap: 20,
         },
       },

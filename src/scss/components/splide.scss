@@ -67,5 +67,23 @@
         height: 10px;
       }
     }
+
+    &__arrow {
+      width: 20px;
+      height: 20px;
+
+      &--prev {
+        left: -30px;
+      }
+
+      &--next {
+        right: -30px;
+      }
+
+      & svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }

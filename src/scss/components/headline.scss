@@ -9,8 +9,8 @@
   transition: 0.2s ease;
 }
 
-// @media (max-width: 767px) {
-//   .headline {
-//     font-size: 32px;
-//   }
-// }
+@media (max-width: 767px) {
+  .headline {
+    font-size: 14px;
+  }
+}
