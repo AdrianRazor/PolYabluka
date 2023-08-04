@@ -65,3 +65,27 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .checkbox {
+    & label {
+      font-size: 14px;
+      gap: 15px;
+
+      &::before {
+        width: 22px;
+        height: 22px;
+        border-width: 5px;
+      }
+
+      & p {
+        font-size: 14px;
+      }
+    }
+
+    &__color {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

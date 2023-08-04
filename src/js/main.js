@@ -172,6 +172,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // filters modal
+  const catalogModal = document.querySelector(".catalog__modal");
+  const catalogSortBtn = document.querySelector(".catalog__sort-btn");
+  if (catalogModal && catalogSortBtn) {
+    const catalogModalCloseBtn = document.querySelector(
+      ".catalog__modal-close"
+    );
+    const catalogModalResetBtn = document.querySelector(
+      ".catalog__modal-reset"
+    );
+
+    catalogSortBtn.addEventListener("click", () => {
+      catalogModal.classList.add("open");
+    });
+
+    catalogModalCloseBtn.addEventListener("click", () => {
+      catalogModal.classList.remove("open");
+    });
+
+    catalogModalResetBtn.addEventListener("click", () => {
+      const checkbox = document.querySelectorAll(".checkbox input");
+
+      checkbox.forEach((input) => {
+        input.checked = false;
+      });
+    });
+  }
+
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {

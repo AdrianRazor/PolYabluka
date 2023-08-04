@@ -445,7 +445,7 @@
             Актуальні моделі Apple iPhone 14 pro max
           </h1>
           <div class="catalog__wrapper">
-            <aside class="catalog__filters">
+            <aside class="catalog__aside">
               <div class="catalog__sort">
                 <p class="text">Сортування:</p>
                 <div class="sort">
@@ -464,147 +464,169 @@
                     </ul>
                   </div>
                 </div>
+                <button class="catalog__sort-btn">
+                  <svg width="42" height="42">
+                    <use xlink:href="img/sprite.svg#filter"></use>
+                  </svg>
+                </button>
               </div>
 
-              <div class="dropdown">
-                <div class="dropdown__head">
-                  <p class="text">Колiр</p>
-                  <svg width="14" height="8">
-                    <use xlink:href="img/sprite.svg#arrowDown"></use>
-                  </svg>
+              <div class="catalog__modal">
+                <div class="catalog__modal-head">
+                  <h3 class="title">Фільтр</h3>
+                  <div class="catalog__modal-buttons">
+                    <button class="text catalog__modal-reset">
+                      Скинути фільтр
+                    </button>
+                    <button class="catalog__modal-close">
+                      <svg width="28" height="28">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li class="checkbox checkbox--color dropdown__item">
-                      <input type="checkbox" id="color-grey" />
-                      <label for="color-grey">
-                        <div
-                          class="checkbox__color"
-                          style="background-color: #898989"
-                        ></div>
-                        <p>Cірий</p>
-                      </label>
-                    </li>
-                    <li class="checkbox checkbox--color dropdown__item">
-                      <input type="checkbox" id="color-blue" />
-                      <label for="color-blue">
-                        <div
-                          class="checkbox__color"
-                          style="background-color: #68cef8"
-                        ></div>
-                        <p>Блакитний</p>
-                      </label>
-                    </li>
-                    <li class="checkbox checkbox--color dropdown__item">
-                      <input type="checkbox" id="color-purple" />
-                      <label for="color-purple">
-                        <div
-                          class="checkbox__color"
-                          style="background-color: #9f87c0"
-                        ></div>
-                        <p>Фіолетовий</p>
-                      </label>
-                    </li>
-                    <li class="checkbox checkbox--color dropdown__item">
-                      <input type="checkbox" id="color-white" />
-                      <label for="color-white">
-                        <div
-                          class="checkbox__color"
-                          style="background-color: #ececec"
-                        ></div>
-                        <p>Білий</p>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                <div class="catalog__filters">
+                  <div class="dropdown">
+                    <div class="dropdown__head">
+                      <p class="text">Колiр</p>
+                      <svg width="14" height="8">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__body">
+                      <ul class="dropdown__list">
+                        <li class="checkbox checkbox--color dropdown__item">
+                          <input type="checkbox" id="color-grey" />
+                          <label for="color-grey">
+                            <div
+                              class="checkbox__color"
+                              style="background-color: #898989"
+                            ></div>
+                            <p>Cірий</p>
+                          </label>
+                        </li>
+                        <li class="checkbox checkbox--color dropdown__item">
+                          <input type="checkbox" id="color-blue" />
+                          <label for="color-blue">
+                            <div
+                              class="checkbox__color"
+                              style="background-color: #68cef8"
+                            ></div>
+                            <p>Блакитний</p>
+                          </label>
+                        </li>
+                        <li class="checkbox checkbox--color dropdown__item">
+                          <input type="checkbox" id="color-purple" />
+                          <label for="color-purple">
+                            <div
+                              class="checkbox__color"
+                              style="background-color: #9f87c0"
+                            ></div>
+                            <p>Фіолетовий</p>
+                          </label>
+                        </li>
+                        <li class="checkbox checkbox--color dropdown__item">
+                          <input type="checkbox" id="color-white" />
+                          <label for="color-white">
+                            <div
+                              class="checkbox__color"
+                              style="background-color: #ececec"
+                            ></div>
+                            <p>Білий</p>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
-              <div class="dropdown">
-                <div class="dropdown__head">
-                  <p class="text">Об'єм пам'яті</p>
-                  <svg width="14" height="8">
-                    <use xlink:href="img/sprite.svg#arrowDown"></use>
-                  </svg>
-                </div>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="128" />
-                      <label for="128"> 128 GB </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="256" />
-                      <label for="256"> 256 GB </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="512" />
-                      <label for="512"> 512 GB </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="1024" />
-                      <label for="1024"> 1 TB </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <div class="dropdown">
+                    <div class="dropdown__head">
+                      <p class="text">Об'єм пам'яті</p>
+                      <svg width="14" height="8">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__body">
+                      <ul class="dropdown__list">
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="128" />
+                          <label for="128"> 128 GB </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="256" />
+                          <label for="256"> 256 GB </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="512" />
+                          <label for="512"> 512 GB </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="1024" />
+                          <label for="1024"> 1 TB </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
-              <div class="dropdown">
-                <div class="dropdown__head">
-                  <p class="text">Версiя</p>
-                  <svg width="14" height="8">
-                    <use xlink:href="img/sprite.svg#arrowDown"></use>
-                  </svg>
-                </div>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="version-1" />
-                      <label for="version-1"> version-1 </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="version-2" />
-                      <label for="version-2"> version-2 </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="version-3" />
-                      <label for="version-3"> version-3 </label>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <div class="dropdown">
+                    <div class="dropdown__head">
+                      <p class="text">Версiя</p>
+                      <svg width="14" height="8">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__body">
+                      <ul class="dropdown__list">
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="version-1" />
+                          <label for="version-1"> version-1 </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="version-2" />
+                          <label for="version-2"> version-2 </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="version-3" />
+                          <label for="version-3"> version-3 </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
-              <div class="dropdown">
-                <div class="dropdown__head">
-                  <p class="text">Ціна (грн)</p>
-                  <svg width="14" height="8">
-                    <use xlink:href="img/sprite.svg#arrowDown"></use>
-                  </svg>
-                </div>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li class="dropdown__item">на доработке</li>
-                  </ul>
-                </div>
-              </div>
+                  <div class="dropdown">
+                    <div class="dropdown__head">
+                      <p class="text">Ціна (грн)</p>
+                      <svg width="14" height="8">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__body">
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item">на доработке</li>
+                      </ul>
+                    </div>
+                  </div>
 
-              <div class="dropdown">
-                <div class="dropdown__head">
-                  <p class="text">Стан</p>
-                  <svg width="14" height="8">
-                    <use xlink:href="img/sprite.svg#arrowDown"></use>
-                  </svg>
-                </div>
-                <div class="dropdown__body">
-                  <ul class="dropdown__list">
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="new" />
-                      <label for="new"> новий </label>
-                    </li>
-                    <li class="checkbox dropdown__item">
-                      <input type="checkbox" id="old" />
-                      <label for="old"> б/у </label>
-                    </li>
-                  </ul>
+                  <div class="dropdown">
+                    <div class="dropdown__head">
+                      <p class="text">Стан</p>
+                      <svg width="14" height="8">
+                        <use xlink:href="img/sprite.svg#arrowDown"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown__body">
+                      <ul class="dropdown__list">
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="new" />
+                          <label for="new"> новий </label>
+                        </li>
+                        <li class="checkbox dropdown__item">
+                          <input type="checkbox" id="old" />
+                          <label for="old"> б/у </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </aside>

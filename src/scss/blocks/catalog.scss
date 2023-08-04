@@ -12,16 +12,39 @@
     gap: 30px;
   }
 
+  &__aside,
   &__filters {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
 
+  &__modal {
+    &-head {
+      display: none;
+    }
+  }
+
   &__sort {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    &-btn {
+      display: none;
+      padding: 2px;
+
+      & svg {
+        fill: $black;
+        transition: 0.2s ease;
+      }
+
+      &:hover {
+        & svg {
+          fill: $aqua;
+        }
+      }
+    }
   }
 
   &__grid {
@@ -33,16 +56,152 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1279px) {
   .catalog {
     &__wrapper {
       grid-template-columns: initial;
+    }
+
+    &__sort {
+      flex-direction: row;
+      align-items: center;
+
+      &-btn {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    &__modal {
+      display: none;
+
+      width: 100%;
+      height: 100%;
+      padding: 40px 20px;
+      background-color: $white;
+
+      overflow-y: auto;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+
+      &-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 40px;
+      }
+
+      &-buttons {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      &-reset {
+        height: 60px;
+        color: $aqua;
+      }
+
+      &-close {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $aqua;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg {
+          fill: $white;
+        }
+      }
+
+      &.open {
+        display: block;
+      }
     }
 
     &__grid {
       grid-template-columns: 1fr 1fr;
       gap: 15px;
       padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__wrapper {
+      gap: 20px;
+    }
+
+    &__sort {
+      gap: 8px;
+
+      &-btn {
+        & svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+
+    &__modal {
+      padding: 20px 15px;
+
+      &-head {
+        margin-bottom: 20px;
+      }
+
+      &-buttons {
+        gap: 20px;
+      }
+
+      &-reset {
+        height: 40px;
+      }
+
+      &-close {
+        width: 40px;
+        height: 40px;
+
+        & svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &__filters {
+      gap: 20px;
+    }
+
+    &__grid {
+      margin: 0 -15px;
+      padding: 15px;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .catalog {
+    &__sort {
+      display: grid;
+      grid-template-columns: auto auto;
+
+      & > p {
+        grid-column: span 2;
+      }
     }
   }
 }

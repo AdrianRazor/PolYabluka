@@ -80,3 +80,47 @@
     }
   }
 }
+
+@media (max-width: 1279px) {
+  .sort {
+    max-width: 280px;
+
+    & p {
+      font-size: 16px;
+    }
+
+    &__body {
+      top: calc(100% + 10px);
+    }
+
+    &__item {
+      padding: 10px 20px;
+      font-size: 16px;
+
+      &:first-of-type {
+        padding-top: 20px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sort {
+    &__head {
+      padding: 10px 20px;
+    }
+
+    & p {
+      font-size: 12px;
+    }
+
+    &__item {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+  }
+}
