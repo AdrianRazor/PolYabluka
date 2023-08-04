@@ -26,28 +26,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  // dropdown
-  const dropdown = document.querySelectorAll(".dropdown");
-  if (dropdown) {
-    dropdown.forEach((drop) => {
-      const wrapper = drop.querySelector(".dropdown__wrapper");
-      const body = drop.querySelector(".dropdown__body");
-      const head = drop.querySelector(".dropdown__head");
-      const current = drop.querySelector(".dropdown__current");
-      const item = drop.querySelectorAll(".dropdown__item");
+  // lang
+  const lang = document.querySelectorAll(".lang");
+  if (lang) {
+    lang.forEach((langDrop) => {
+      const wrapper = langDrop.querySelector(".lang__wrapper");
+      const body = langDrop.querySelector(".lang__body");
+      const head = langDrop.querySelector(".lang__head");
+      const current = langDrop.querySelector(".lang__current");
+      const item = langDrop.querySelectorAll(".lang__item");
 
       if (head) {
         head.addEventListener("click", () => {
-          if (drop.classList.contains("open")) {
-            drop.classList.remove("open");
+          if (langDrop.classList.contains("open")) {
+            langDrop.classList.remove("open");
             wrapper.style.height = 0;
           } else {
-            dropdown.forEach((drops) => {
-              drops.classList.remove("open");
+            lang.forEach((langDrops) => {
+              langDrops.classList.remove("open");
               wrapper.style.height = 0;
             });
 
-            drop.classList.add("open");
+            langDrop.classList.add("open");
             wrapper.style.height = `${body.scrollHeight}px`;
           }
         });
@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (current && item) {
         item.forEach((el) => {
           el.addEventListener("click", () => {
-            const icon = el.querySelector(".dropdown__icon");
-            const text = el.querySelector(".dropdown__text");
+            const icon = el.querySelector(".lang__icon");
+            const text = el.querySelector(".lang__text");
 
             if (icon) {
               const itemUse = icon.querySelector("use");
@@ -73,21 +73,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (text) {
               const itemValue = text.textContent;
 
-              const currentText = current.querySelector(".dropdown__text");
+              const currentText = current.querySelector(".lang__text");
               const currentValue = currentText.textContent;
 
               currentText.textContent = itemValue;
               text.textContent = currentValue;
             }
 
-            drop.classList.remove("open");
+            langDrop.classList.remove("open");
           });
         });
       }
 
       window.addEventListener("click", (e) => {
-        if (!e.target.closest(".dropdown")) {
-          drop.classList.remove("open");
+        if (!e.target.closest(".lang")) {
+          langDrop.classList.remove("open");
           wrapper.style.height = 0;
         }
       });
@@ -124,6 +124,52 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const cardBtn = document.querySelectorAll(".card__btn");
   if (cardBtn) {
     setActiveClass(cardBtn);
+  }
+
+  // sort
+  const sort = document.querySelector(".sort");
+  const sortHead = sort.querySelector(".sort__head");
+  if (sort && sortHead) {
+    const sortCurrent = sort.querySelector("p");
+    const sortItem = sort.querySelectorAll(".sort__item");
+
+    if (sortItem) {
+      sortItem.forEach((item) => {
+        item.addEventListener("click", () => {
+          sortCurrent.textContent = item.textContent;
+          sort.classList.remove("open");
+        });
+      });
+    }
+
+    sortHead.addEventListener("click", () => {
+      sort.classList.toggle("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (!e.target.closest(".sort")) {
+        sort.classList.remove("open");
+      }
+    });
+  }
+
+  // dropdown
+  const dropdown = document.querySelectorAll(".dropdown");
+  if (dropdown) {
+    dropdown.forEach((drop) => {
+      const dropdownHead = drop.querySelector(".dropdown__head");
+      const dropdownItem = drop.querySelectorAll(".dropdown__item");
+
+      dropdownHead.addEventListener("click", () => {
+        drop.classList.toggle("open");
+      });
+
+      dropdownItem.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    });
   }
 
   // splide

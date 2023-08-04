@@ -1,0 +1,117 @@
+.lang {
+  position: relative;
+  min-width: 78px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    background-color: $white;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    & svg {
+      fill: $black;
+    }
+  }
+
+  &__text {
+    line-height: 170%;
+    color: $white;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+
+  &__item {
+    @media (any-hover: hover) {
+      &:hover {
+        & .lang {
+          &__icon {
+            background-color: $aqua;
+          }
+
+          &__text {
+            color: $aqua;
+          }
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    transition: 0.2s ease;
+
+    & svg {
+      fill: $white;
+    }
+  }
+
+  &__wrapper {
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: calc(100% + 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: $white;
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      transition: 0.3s ease;
+    }
+  }
+
+  &__body {
+    padding: 30px;
+    border-radius: 0 0 99px 99px;
+    background-color: $black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transform: translateY(-100%);
+    transition: 0.3s ease;
+  }
+
+  &.open {
+    & .lang {
+      &__arrow {
+        transform: rotate(-90deg);
+      }
+
+      &__wrapper {
+        &::before {
+          width: 70%;
+        }
+      }
+
+      &__body {
+        transform: translateY(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.checkbox {
+  & input {
+    display: none;
+
+    &:checked ~ label {
+      &::before {
+        background-color: $black;
+        border-color: #e3e3e3;
+      }
+
+      & .checkbox__color {
+        border: 2px solid $light;
+      }
+
+      & p {
+        color: $aqua;
+      }
+    }
+  }
+
+  & label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #e3e3e3;
+      border: 6px solid transparent;
+
+      transition: 0.2s ease;
+    }
+
+    & p {
+      color: $black;
+      transition: 0.2s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        & p {
+          color: $aqua;
+        }
+      }
+    }
+  }
+
+  &__color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  &--color {
+    & label {
+      &::before {
+        content: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.sort {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+  background-color: $light;
+
+  cursor: pointer;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 20px;
+
+    & p {
+      font-size: 13px;
+    }
+
+    & svg {
+      fill: $black;
+      transition: 0.3s ease;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    background-color: $light;
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 10;
+
+    transition: 0.3s ease;
+  }
+
+  &__list {
+    min-height: 0;
+  }
+
+  &__item {
+    padding: 7px 20px;
+    font-size: 13px;
+
+    transition: 0.2s ease;
+
+    &:first-of-type {
+      padding-top: 15px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 15px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $aqua;
+      }
+    }
+  }
+
+  &.open {
+    & .sort {
+      &__head {
+        & svg {
+          transform: rotate(-90deg);
+        }
+      }
+
+      &__body {
+        grid-template-rows: 1fr;
+        box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
