@@ -12,24 +12,10 @@
   }
 
   &__status {
-    padding: 10px;
-    border-radius: 99px;
-
     position: absolute;
     top: 30px;
     right: 30px;
     z-index: 5;
-
-    font-weight: 400;
-    color: $white;
-
-    &--green {
-      background-color: $green;
-    }
-
-    &--blue {
-      background-color: $blue;
-    }
   }
 
   &__info {
@@ -133,8 +119,6 @@
     }
 
     &__status {
-      padding: 6px;
-
       top: 15px;
       right: 15px;
     }

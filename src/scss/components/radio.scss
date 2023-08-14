@@ -1,0 +1,45 @@
+.radio {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item {
+    & input {
+      display: none;
+
+      &:checked ~ label {
+        background-color: $white;
+        border-color: $aqua;
+      }
+    }
+
+    & label {
+      display: block;
+      padding: 14px 28px;
+      border-radius: 99px;
+      background-color: $light;
+
+      border: 2px solid transparent;
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+  }
+
+  &--color {
+    & input {
+      &:checked ~ label {
+        border-color: $light;
+      }
+    }
+
+    & label {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 50%;
+    }
+  }
+}

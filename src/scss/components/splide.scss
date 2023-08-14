@@ -57,6 +57,13 @@
   }
 }
 
+.splideProductThumbnails {
+  & .splide__track--nav > .splide__list > .splide__slide {
+    border-width: 2px;
+    border-color: $light;
+  }
+}
+
 @media (max-width: 767px) {
   .splide {
     &__pagination {

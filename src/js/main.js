@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // sort
   const sort = document.querySelector(".sort");
-  const sortHead = sort.querySelector(".sort__head");
+  const sortHead = document.querySelector(".sort__head");
   if (sort && sortHead) {
     const sortCurrent = sort.querySelector("p");
     const sortItem = sort.querySelectorAll(".sort__item");
@@ -287,6 +287,59 @@ document.addEventListener("DOMContentLoaded", function (event) {
       },
     });
     splideTestimonials.mount();
+  }
+
+  if (
+    document.querySelector(".splideProductMain") &&
+    document.querySelector(".splideProductThumbnails")
+  ) {
+    var splideProductMain = new Splide(".splideProductMain", {
+      type: "fade",
+      heightRatio: 1,
+      pagination: false,
+      arrows: false,
+      breakpoints: {
+        1289: {
+          arrows: false,
+        },
+        999: {
+          width: "70%",
+        },
+        767: {
+          width: "100%",
+          padding: "40px",
+          arrows: true,
+        },
+      },
+    });
+
+    var splideProductThumbnails = new Splide(".splideProductThumbnails", {
+      rewind: true,
+      perPage: 3,
+      isNavigation: true,
+      gap: 30,
+      focus: "center",
+      pagination: false,
+      width: "80%",
+      dragMinThreshold: {
+        mouse: 4,
+        touch: 10,
+      },
+      breakpoints: {
+        1289: {
+          gap: 20,
+          fixedHeight: 120,
+          arrows: true,
+        },
+        767: {
+          destroy: true,
+        },
+      },
+    });
+
+    splideProductMain.sync(splideProductThumbnails);
+    splideProductMain.mount();
+    splideProductThumbnails.mount();
   }
 
   function setActiveClass(element) {

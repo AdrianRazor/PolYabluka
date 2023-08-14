@@ -1,0 +1,25 @@
+.status {
+  padding: 10px;
+  border-radius: 99px;
+
+  font-weight: 400;
+  color: $white;
+
+  &--green {
+    background-color: $green;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+
+  &--grey {
+    background-color: #898989;
+  }
+}
+
+@media (max-width: 767px) {
+  .status {
+    padding: 6px;
+  }
+}

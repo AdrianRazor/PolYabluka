@@ -5,6 +5,10 @@
   font-size: 21px;
   line-height: 125%;
   color: $black;
+
+  &--blue {
+    color: $aqua;
+  }
 }
 
 // @media (max-width: 1279px) {
