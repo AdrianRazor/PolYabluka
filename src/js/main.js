@@ -224,7 +224,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {
-      type: "loop",
       height: 550,
       arrows: false,
       breakpoints: {
@@ -241,7 +240,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (document.querySelector(".splidePopular")) {
     var splidePopular = new Splide(".splidePopular", {
-      type: "loop",
       perPage: 1,
       width: 200,
       gap: 15,
@@ -267,7 +265,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (document.querySelector(".splideGoods")) {
     var splideGoods = new Splide(".splideGoods", {
-      type: "loop",
       perPage: 4,
       perMove: 4,
       gap: 30,
@@ -291,7 +288,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (document.querySelector(".splideTestimonials")) {
     var splideTestimonials = new Splide(".splideTestimonials", {
-      type: "loop",
       height: 430,
       perPage: 3,
       perMove: 3,
