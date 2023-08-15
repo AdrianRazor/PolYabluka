@@ -2,6 +2,7 @@
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -17,11 +18,13 @@
 
     & label {
       display: block;
+
       padding: 14px 28px;
       border-radius: 99px;
       background-color: $light;
-
       border: 2px solid transparent;
+
+      white-space: nowrap;
       cursor: pointer;
 
       transition: 0.2s ease;
@@ -40,6 +43,25 @@
       height: 30px;
       padding: 0;
       border-radius: 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .radio {
+    &__item {
+      & label {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+    }
+
+    &--color {
+      & label {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+      }
     }
   }
 }

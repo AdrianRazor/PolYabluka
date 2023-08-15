@@ -10,10 +10,10 @@
     & > span {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
 
-      &:not(:first-of-type) {
-        &::before {
+      &:not(:last-of-type) {
+        &::after {
           content: "";
           display: block;
           width: 10px;

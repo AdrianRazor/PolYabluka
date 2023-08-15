@@ -302,12 +302,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         1289: {
           arrows: false,
         },
-        999: {
-          width: "70%",
-        },
         767: {
-          width: "100%",
-          padding: "40px",
+          width: "85%",
           arrows: true,
         },
       },
@@ -326,11 +322,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         touch: 10,
       },
       breakpoints: {
-        1289: {
-          gap: 20,
-          fixedHeight: 120,
-          arrows: true,
-        },
         767: {
           destroy: true,
         },

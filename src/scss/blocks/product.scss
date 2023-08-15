@@ -50,6 +50,7 @@
 
   &__anchor {
     width: fit-content;
+    height: fit-content;
     border-bottom: 2px solid $aqua;
   }
 
@@ -154,10 +155,10 @@
 
   &__credit {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
 
     &-btn {
-      max-width: 270px;
+      width: 270px;
       grid-row: span 2;
     }
   }
@@ -166,6 +167,7 @@
     max-width: 460px;
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     gap: 24px 16px;
   }
 
@@ -190,5 +192,101 @@
 
   &__btn-inspection {
     grid-column: span 2;
+  }
+}
+
+@media (max-width: 1279px) {
+  .product {
+    &__wrapper {
+      grid-template-columns: initial;
+      gap: 30px 20px;
+
+      padding-bottom: initial;
+      border-bottom: initial;
+    }
+
+    &__info {
+      grid-row: initial;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .product {
+    &__gallery {
+      &-top {
+        margin-bottom: 0;
+      }
+
+      &-bottom {
+        display: none;
+      }
+    }
+
+    &__title,
+    &__controls {
+      margin-top: 20px;
+    }
+
+    &__anchor {
+      font-size: 14px;
+    }
+
+    &__compare {
+      width: 50px;
+      height: 50px;
+
+      & svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__block {
+      margin-top: 25px;
+      padding-top: 20px;
+    }
+
+    &__buy {
+      flex-direction: column;
+      align-items: start;
+
+      &-title {
+        & span {
+          font-size: 14px;
+        }
+      }
+
+      &-btn {
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &__credit {
+      grid-template-columns: initial;
+
+      &-btn {
+        order: 1;
+        margin-top: 20px;
+      }
+    }
+
+    &__look {
+      max-width: 270px;
+      gap: 16px 12px;
+    }
+
+    &__hint {
+      width: 20px;
+      height: 20px;
+
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
