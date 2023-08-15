@@ -95,12 +95,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // read more
+  const btnShowMore = document.querySelector(".btn--show-more");
   const servicesText = document.querySelector(".services__box .text.hidden");
-  const servicesBtn = document.querySelector(".services__btn");
-  if (servicesText && servicesBtn) {
-    servicesBtn.addEventListener("click", () => {
-      servicesText.classList.toggle("hidden");
-      servicesBtn.classList.toggle("active");
+  const characteristicsInner = document.querySelector(
+    ".characteristics__inner"
+  );
+  if (btnShowMore) {
+    btnShowMore.addEventListener("click", () => {
+      btnShowMore.classList.toggle("active");
+
+      if (servicesText) {
+        servicesText.classList.toggle("hidden");
+      }
+
+      if (characteristicsInner) {
+        characteristicsInner.classList.toggle("show");
+      }
     });
   }
 

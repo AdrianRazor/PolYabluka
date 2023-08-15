@@ -131,45 +131,6 @@
       margin-top: 20px;
     }
   }
-
-  &__btn {
-    margin: 50px auto 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $aqua;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: $black;
-    transition: 0.2s ease;
-
-    & svg {
-      fill: $black;
-      transition: fill 0.2s ease;
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        border-bottom: 1px solid $black;
-        color: $aqua;
-
-        & svg {
-          fill: $aqua;
-        }
-      }
-    }
-
-    &.active {
-      border-bottom: 1px solid $black;
-      color: $aqua;
-
-      & svg {
-        fill: $aqua;
-        transform: rotate(180deg);
-      }
-    }
-  }
 }
 
 @media (max-width: 1279px) {
@@ -198,10 +159,6 @@
       column-count: initial;
       column-gap: initial;
     }
-
-    &__btn {
-      margin: 20px auto 0;
-    }
   }
 }
 @media (max-width: 767px) {
@@ -223,15 +180,6 @@
     &__box {
       & p + p {
         margin-top: 15px;
-      }
-    }
-
-    &__btn {
-      margin: 15px auto 0;
-
-      & svg {
-        width: 10px;
-        height: 6px;
       }
     }
   }

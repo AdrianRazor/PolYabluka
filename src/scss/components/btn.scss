@@ -49,11 +49,69 @@
   &--small {
     height: 60px;
   }
+
+  &--show-more {
+    width: initial;
+    height: initial;
+    border-radius: initial;
+
+    margin: 50px auto 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $aqua;
+
+    color: $black;
+    transition: 0.2s ease;
+
+    & svg {
+      fill: $black;
+      transition: fill 0.2s ease;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $black;
+        background-color: transparent;
+        color: $aqua;
+
+        & svg {
+          fill: $aqua;
+        }
+      }
+    }
+
+    &.active {
+      border-bottom: 1px solid $black;
+      color: $aqua;
+
+      & svg {
+        fill: $aqua;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .btn {
+    &--show-more {
+      margin: 20px auto 0;
+    }
+  }
 }
 
 @media (max-width: 767px) {
   .btn {
     height: 36px;
     font-size: 12px;
+
+    &--show-more {
+      height: initial;
+      margin: 15px auto 0;
+
+      & svg {
+        width: 10px;
+        height: 6px;
+      }
+    }
   }
 }

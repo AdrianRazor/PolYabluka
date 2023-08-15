@@ -1,0 +1,19 @@
+.stripe {
+  padding-top: 20px;
+  padding-bottom: 18px;
+  background-color: $aqua;
+
+  &__title {
+    font-weight: 600;
+    color: $white;
+    text-transform: initial;
+    letter-spacing: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .stripe {
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+}
