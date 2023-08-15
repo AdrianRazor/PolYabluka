@@ -95,22 +95,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // read more
-  const btnShowMore = document.querySelector(".btn--show-more");
+  const servicesBtn = document.querySelector(".services__btn");
   const servicesText = document.querySelector(".services__box .text.hidden");
+
+  const characteristicsBtn = document.querySelector(".characteristics__btn");
   const characteristicsInner = document.querySelector(
     ".characteristics__inner"
   );
-  if (btnShowMore) {
-    btnShowMore.addEventListener("click", () => {
-      btnShowMore.classList.toggle("active");
 
-      if (servicesText) {
-        servicesText.classList.toggle("hidden");
-      }
+  const descriptionBtn = document.querySelector(".description__show");
+  const descriptionContent = document.querySelector(".description__content");
 
-      if (characteristicsInner) {
-        characteristicsInner.classList.toggle("show");
-      }
+  if (servicesBtn && servicesText) {
+    servicesBtn.addEventListener("click", () => {
+      servicesBtn.classList.toggle("active");
+      servicesText.classList.toggle("hidden");
+    });
+  }
+  if (characteristicsBtn && characteristicsInner) {
+    characteristicsBtn.addEventListener("click", () => {
+      characteristicsBtn.classList.toggle("active");
+      characteristicsInner.classList.toggle("show");
+    });
+  }
+  if (descriptionBtn && descriptionContent) {
+    descriptionBtn.addEventListener("click", () => {
+      descriptionBtn.classList.toggle("active");
+      descriptionContent.classList.toggle("show");
     });
   }
 
