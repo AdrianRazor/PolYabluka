@@ -16,13 +16,16 @@
 @import "components/header.scss";
 @import "components/nav.scss";
 @import "components/footer.scss";
+@import "components/modal.scss";
 
 @import "components/breadcrumbs.scss";
 @import "components/card.scss";
 @import "components/card-mini.scss";
+@import "components/card-order.scss";
 @import "components/chat.scss";
 @import "components/checkbox.scss";
 @import "components/comment.scss";
+@import "components/counter.scss";
 @import "components/dropdown.scss";
 @import "components/lang.scss";
 @import "components/pagination.scss";
@@ -32,6 +35,7 @@
 @import "components/splide.scss";
 @import "components/status.scss";
 @import "components/stripe.scss";
+@import "components/total.scss";
 
 @import "blocks/popular.scss";
 @import "blocks/goods.scss";
@@ -42,5 +46,7 @@
 @import "blocks/product.scss";
 @import "blocks/characteristics.scss";
 @import "blocks/description.scss";
+
+@import "blocks/ordering.scss";
 
 @import "blocks/news.scss";

@@ -222,7 +222,7 @@
                 </svg>
                 <span>1</span>
               </a>
-              <a href="cart.html">
+              <a>
                 <svg width="40" height="40">
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
@@ -885,6 +885,123 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <button class="modal__close">
+        <svg width="22" height="22">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <div class="modal__window">
+        <div class="modal__content">
+          <!-- step 1 - Order -->
+          <div class="ordering">
+            <h2 class="headline ordering__headline">Оформити замовлення</h2>
+            <ul class="ordering__list">
+              <li class="ordering__item card-order">
+                <div class="card-order__img">
+                  <img src="img/img-9.png" alt="product" />
+                </div>
+                <p class="text">Apple iPhone 13 Pro 256G B Gold</p>
+                <div class="card-order__delete">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#delete"></use>
+                  </svg>
+                </div>
+                <div class="headline card-order__price">48 900 грн</div>
+                <div class="counter">
+                  <button class="counter__btn minus">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="counter__amount">
+                    <span>1</span>
+                  </div>
+                  <button class="counter__btn plus">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="ordering__item ordering__item--service">
+                <p class="text">Додаткові послуги:</p>
+                <div class="ordering__service">
+                  <div class="checkbox">
+                    <input type="radio" name="guarantee" id="one-year" />
+                    <label for="one-year"> Гарантія 1 рік </label>
+                  </div>
+                  <p class="ordering__service-price">1 600 грн</p>
+                </div>
+              </li>
+              <li class="ordering__item card-order">
+                <div class="card-order__img">
+                  <img src="img/img-11.png" alt="product" />
+                </div>
+                <p class="text">Apple AirPods Pro with MagSafe</p>
+                <div class="card-order__delete">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#delete"></use>
+                  </svg>
+                </div>
+                <div class="headline card-order__price">1 100 грн</div>
+                <div class="counter">
+                  <button class="counter__btn minus">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="counter__amount">
+                    <span>99</span>
+                  </div>
+                  <button class="counter__btn plus">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div class="total">
+              <div class="total__promo">
+                <div class="total__promo-left">
+                  <!-- Вариант 1 -->
+                  <a href="#" class="hidden">У вас є промо-код на знижку?</a>
+
+                  <!-- Вариант 2 -->
+                  <p>Промо-код: <span>YOURSALE</span></p>
+                  <button class="total__promo-delete">
+                    <svg width="12" height="12">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="total__promo-right">
+                  <!-- Вариант 1 -->
+                  <a href="#">Скористатися бонусами</a>
+
+                  <!-- Вариант 2 -->
+                  <a href="#" class="hidden">Зареєструватися</a>
+                </div>
+              </div>
+              <div class="total__wrapper">
+                <div class="total__discount">
+                  <p>Знижка</p>
+                  <span>1 200 грн</span>
+                </div>
+                <div class="total__sum">
+                  <p class="text">Сума вашого замовлення:</p>
+                  <h3 class="headline">48 800 грн</h3>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn--black">Перейти до оформлення</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="libs/splide.min.js"></script>
     <script src="js/main.js"></script>

@@ -1,0 +1,32 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__btn {
+    &.minus {
+      transform: rotate(90deg);
+    }
+
+    &.plus {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__amount {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $light;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+}

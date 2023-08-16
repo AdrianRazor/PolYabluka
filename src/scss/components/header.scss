@@ -71,6 +71,8 @@
       position: relative;
       display: block;
 
+      cursor: pointer;
+
       & svg {
         fill: $black;
         transition: 0.2s ease;

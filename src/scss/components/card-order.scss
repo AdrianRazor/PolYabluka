@@ -1,0 +1,29 @@
+.card-order {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 30px;
+
+  &__img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid $light;
+
+    grid-row: span 2;
+  }
+
+  &__delete {
+    justify-self: center;
+    cursor: pointer;
+
+    & svg {
+      fill: $black;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      & svg {
+        fill: $aqua;
+      }
+    }
+  }
+}
