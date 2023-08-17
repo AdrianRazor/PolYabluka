@@ -231,13 +231,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const cartBtn = document.querySelector("#cart");
   if (modal && cartBtn) {
     cartBtn.addEventListener("click", () => {
-      root.classList.add("block");
+      root.classList.add("lock");
       modal.classList.add("open");
     });
 
     window.addEventListener("click", (e) => {
       if (e.target.classList.contains("modal")) {
-        root.classList.remove("block");
+        root.classList.remove("lock");
         modal.classList.remove("open");
       }
     });
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const closeBtn = document.querySelector(".modal__close");
 
     closeBtn.addEventListener("click", () => {
-      root.classList.remove("block");
+      root.classList.remove("lock");
       modal.classList.remove("open");
     });
   }

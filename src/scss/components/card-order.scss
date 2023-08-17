@@ -26,4 +26,27 @@
       }
     }
   }
+
+  &__price {
+    align-self: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-order {
+    gap: 15px;
+
+    &__img {
+      width: 90px;
+      height: 90px;
+      border-width: 1px;
+    }
+
+    &__delete {
+      & svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
 }

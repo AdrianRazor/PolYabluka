@@ -79,9 +79,58 @@
     & a {
       color: $aqua;
     }
+
+    &.active {
+      display: block;
+    }
   }
 
   &__select {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    gap: 15px;
+
+    &--modal {
+      margin-top: 20px;
+    }
+
+    &__checkbox {
+      padding-bottom: 15px;
+      border-bottom-width: 2px;
+    }
+
+    &__sub-checkbox {
+      margin-top: 15px;
+      margin-left: 35px;
+
+      &:not(:last-of-type) {
+        padding-bottom: 15px;
+        border-bottom-width: 1px;
+      }
+    }
+
+    &__hint {
+      margin-top: 5px;
+      margin-left: 35px;
+
+      font-size: 10px;
+    }
+
+    & input {
+      border-width: 1px;
+      font-size: 12px;
+    }
+
+    &__error {
+      font-size: 12px;
+    }
+
+    &__select {
+      margin-top: 15px;
+    }
   }
 }

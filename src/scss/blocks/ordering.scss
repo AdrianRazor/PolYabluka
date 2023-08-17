@@ -22,6 +22,7 @@
 
     &-price {
       font-weight: 600;
+      white-space: nowrap;
     }
   }
 
@@ -68,6 +69,47 @@
       & span {
         color: $grey;
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ordering {
+    &__list {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      padding: 15px 0;
+      border-bottom-width: 1px;
+
+      &--service {
+        gap: 10px;
+      }
+    }
+
+    &__service {
+      &-price {
+        font-size: 12px;
+      }
+    }
+
+    & table {
+      & tbody {
+        gap: 15px;
+      }
+
+      & tr {
+        gap: 15px;
+      }
+    }
+
+    &__amount {
+      font-size: 12px;
+    }
+
+    &__user-info {
+      margin-top: 5px;
     }
   }
 }

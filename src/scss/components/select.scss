@@ -83,8 +83,6 @@
 
 @media (max-width: 1279px) {
   .select {
-    max-width: 280px;
-
     & p {
       font-size: 16px;
     }
@@ -112,6 +110,11 @@
   .select {
     &__head {
       padding: 10px 20px;
+
+      & svg {
+        width: 12px;
+        height: 6px;
+      }
     }
 
     & p {

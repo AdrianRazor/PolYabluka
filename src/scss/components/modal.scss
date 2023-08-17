@@ -107,3 +107,48 @@
     }
   }
 }
+
+@media (max-width: 1279px) {
+  .modal {
+    &__window {
+      max-width: 60%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .modal {
+    &__window {
+      max-width: 85%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    &__window {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    &__content {
+      padding: 25px 0;
+    }
+
+    &__headline {
+      padding-bottom: 10px;
+    }
+
+    &__close {
+      top: 0;
+      right: 0;
+      padding: 22px 16px 12px;
+
+      & svg {
+        width: 18px;
+        height: 18px;
+        fill: $black;
+      }
+    }
+  }
+}
