@@ -8,6 +8,10 @@
   left: 0;
   z-index: 100;
 
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+
   &__window {
     position: relative;
     max-width: 50%;
@@ -20,6 +24,9 @@
     padding: 0 30px;
     background-color: $white;
     box-shadow: -8px 0px 13px rgba(0, 0, 0, 0.07);
+
+    transform: translateX(100%);
+    transition: 0.5s ease;
   }
 
   &__headline {
@@ -81,11 +88,22 @@
 
     position: absolute;
     top: 20px;
-    right: 50%;
+    right: 100%;
     z-index: 1;
 
     & svg {
       fill: $white;
+    }
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+
+    & .modal {
+      &__window {
+        transform: translateX(0);
+      }
     }
   }
 }

@@ -226,6 +226,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // modal
+  const modal = document.querySelector(".modal");
+  const cartBtn = document.querySelector("#cart");
+  if (modal && cartBtn) {
+    cartBtn.addEventListener("click", () => {
+      root.classList.add("block");
+      modal.classList.add("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal")) {
+        root.classList.remove("block");
+        modal.classList.remove("open");
+      }
+    });
+
+    const closeBtn = document.querySelector(".modal__close");
+
+    closeBtn.addEventListener("click", () => {
+      root.classList.remove("block");
+      modal.classList.remove("open");
+    });
+  }
+
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {
