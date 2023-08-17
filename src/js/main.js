@@ -147,29 +147,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     setActiveClass(cardBtn);
   }
 
-  // sort
-  const sort = document.querySelector(".sort");
-  const sortHead = document.querySelector(".sort__head");
-  if (sort && sortHead) {
-    const sortCurrent = sort.querySelector("p");
-    const sortItem = sort.querySelectorAll(".sort__item");
+  // select
+  const select = document.querySelectorAll(".select");
+  if (select) {
+    select.forEach((sel) => {
+      const selectHead = sel.querySelector(".select__head");
 
-    if (sortItem) {
-      sortItem.forEach((item) => {
-        item.addEventListener("click", () => {
-          sortCurrent.textContent = item.textContent;
-          sort.classList.remove("open");
+      if (selectHead) {
+        const selectCurrent = sel.querySelector("p");
+        const selectItem = sel.querySelectorAll(".select__item");
+
+        selectHead.addEventListener("click", () => {
+          sel.classList.toggle("open");
         });
-      });
-    }
 
-    sortHead.addEventListener("click", () => {
-      sort.classList.toggle("open");
-    });
+        if (selectItem) {
+          selectItem.forEach((item) => {
+            item.addEventListener("click", () => {
+              selectCurrent.textContent = item.textContent;
+              sel.classList.remove("open");
+            });
+          });
+        }
 
-    window.addEventListener("click", (e) => {
-      if (!e.target.closest(".sort")) {
-        sort.classList.remove("open");
+        window.addEventListener("click", (e) => {
+          if (!e.target.closest(".select")) {
+            sel.classList.remove("open");
+          }
+        });
       }
     });
   }
@@ -195,8 +200,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // filters modal
   const catalogModal = document.querySelector(".catalog__modal");
-  const catalogSortBtn = document.querySelector(".catalog__sort-btn");
-  if (catalogModal && catalogSortBtn) {
+  const catalogselectBtn = document.querySelector(".catalog__select-btn");
+  if (catalogModal && catalogselectBtn) {
     const catalogModalCloseBtn = document.querySelector(
       ".catalog__modal-close"
     );
@@ -204,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ".catalog__modal-reset"
     );
 
-    catalogSortBtn.addEventListener("click", () => {
+    catalogselectBtn.addEventListener("click", () => {
       catalogModal.classList.add("open");
     });
 

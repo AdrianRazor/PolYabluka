@@ -1,4 +1,11 @@
 .checkbox {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
   & input {
     display: none;
 
@@ -33,6 +40,7 @@
       border-radius: 50%;
       background-color: #e3e3e3;
       border: 6px solid transparent;
+      flex-shrink: 0;
 
       transition: 0.2s ease;
     }
@@ -51,6 +59,21 @@
     }
   }
 
+  &__img {
+    width: 65px;
+    height: 65px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+  }
+
   &__color {
     width: 30px;
     height: 30px;
@@ -63,6 +86,12 @@
         content: none;
       }
     }
+  }
+
+  &--columns {
+    display: grid;
+    grid-template-columns: 1fr 14% 14%;
+    gap: 0;
   }
 }
 

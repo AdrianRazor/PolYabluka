@@ -2,7 +2,9 @@
   margin-top: auto;
 
   &__wrapper {
+    margin-top: 20px;
     margin-bottom: 30px;
+
     padding: 20px 0;
     border-top: 2px solid $light;
     border-bottom: 2px solid $light;
@@ -18,7 +20,7 @@
     justify-content: space-between;
     gap: 20px;
 
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     &-left {
       display: flex;
@@ -56,6 +58,18 @@
         color: $aqua;
         border-bottom-color: $black;
       }
+    }
+  }
+
+  &__hint {
+    margin-top: 20px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+
+    & a {
+      color: $aqua;
     }
   }
 

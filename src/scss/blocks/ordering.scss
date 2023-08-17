@@ -1,15 +1,10 @@
 .ordering {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  &__headline {
-    padding-bottom: 15px;
-    border-bottom: 2px solid $light;
+  &__list {
+    margin-bottom: 20px;
   }
 
   &__item {
-    padding: 30px 0;
+    padding: 20px 0;
     border-bottom: 2px solid $light;
 
     &--service {
@@ -27,6 +22,52 @@
 
     &-price {
       font-weight: 600;
+    }
+  }
+
+  & table {
+    width: 100%;
+
+    & tbody {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    & tr {
+      display: grid;
+      grid-template-columns: 2fr auto 1fr;
+      align-items: baseline;
+      gap: 20px;
+
+      & td {
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  &__guarantee-cost {
+    font-weight: 600;
+    grid-column: span 2;
+  }
+
+  &__user-info {
+    margin-top: 10px;
+
+    & p {
+      line-height: 160%;
+
+      & span {
+        color: $grey;
+      }
     }
   }
 }

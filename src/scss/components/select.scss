@@ -1,4 +1,4 @@
-.sort {
+.select {
   position: relative;
   width: 100%;
   border-radius: 25px;
@@ -66,7 +66,7 @@
   }
 
   &.open {
-    & .sort {
+    & .select {
       &__head {
         & svg {
           transform: rotate(-90deg);
@@ -82,7 +82,7 @@
 }
 
 @media (max-width: 1279px) {
-  .sort {
+  .select {
     max-width: 280px;
 
     & p {
@@ -109,7 +109,7 @@
 }
 
 @media (max-width: 767px) {
-  .sort {
+  .select {
     &__head {
       padding: 10px 20px;
     }
