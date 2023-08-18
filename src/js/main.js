@@ -242,11 +242,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     });
 
-    const closeBtn = document.querySelector(".modal__close");
+    const closeBtn = modal.querySelector(".modal__close");
 
     closeBtn.addEventListener("click", () => {
       root.classList.remove("lock");
       modal.classList.remove("open");
+    });
+  }
+
+  // use bonuses button
+  const modalBonuses = document.querySelector(".modal--bonus");
+  const useBonusesBtn = document.querySelector("#use-bonuses");
+  if (useBonusesBtn && modalBonuses) {
+    useBonusesBtn.addEventListener("click", () => {
+      modalBonuses.classList.add("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal--bonus")) {
+        modalBonuses.classList.remove("open");
+      }
+    });
+
+    const closeBtn = modalBonuses.querySelector(".modal__close");
+
+    closeBtn.addEventListener("click", () => {
+      modalBonuses.classList.remove("open");
     });
   }
 

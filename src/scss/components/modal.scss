@@ -96,6 +96,42 @@
     }
   }
 
+  &--bonus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 110;
+
+    & .modal {
+      &__window {
+        max-width: 470px;
+        height: initial;
+
+        margin-left: initial;
+        padding: initial;
+
+        transform: translateX(0);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+
+      &__close {
+        top: -20px;
+      }
+    }
+
+    &.open {
+      & .modal {
+        &__window {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   &.open {
     visibility: visible;
     opacity: 1;
