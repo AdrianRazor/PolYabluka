@@ -1,0 +1,126 @@
+.credit {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+  }
+
+  &__table {
+    position: relative;
+    margin-top: 50px;
+
+    &-wrapper {
+      width: 75%;
+      display: flex;
+      overflow-x: auto;
+
+      position: absolute;
+      top: 0;
+      left: 25%;
+
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        height: 10px;
+
+        &-track {
+          background-color: $light;
+        }
+
+        &-thumb {
+          background-color: #e3e3e3;
+        }
+      }
+    }
+  }
+
+  &__list {
+    flex-basis: 33.333%;
+    flex-shrink: 0;
+
+    &:first-of-type {
+      & .credit {
+        &__item {
+          position: relative;
+
+          &:first-of-type {
+            &::before {
+              content: "";
+              display: block;
+              width: 100dvw;
+              height: 100%;
+              background-color: $aqua;
+
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: -1;
+            }
+          }
+
+          &:nth-of-type(2n + 2) {
+            &::before {
+              content: "";
+              display: block;
+              width: 100dvw;
+              height: 100%;
+              background-color: $light;
+
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      padding: 30px 0;
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .credit {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &__table {
+      margin-top: 40px;
+
+      &-wrapper {
+        width: 66%;
+        left: 34%;
+      }
+    }
+
+    &__list {
+      flex-basis: 50%;
+    }
+
+    &__item {
+      padding: 15px 0;
+
+      &:first-of-type {
+        padding: 20px 0;
+      }
+    }
+  }
+}
