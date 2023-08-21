@@ -226,27 +226,75 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  // modal
-  const modal = document.querySelector(".modal");
+  // modal cart
+  const modalCart = document.querySelector(".modal--cart");
   const cartBtn = document.querySelector("#cart");
-  if (modal && cartBtn) {
+  if (modalCart && cartBtn) {
     cartBtn.addEventListener("click", () => {
       root.classList.add("lock");
-      modal.classList.add("open");
+      modalCart.classList.add("open");
     });
 
     window.addEventListener("click", (e) => {
       if (e.target.classList.contains("modal")) {
         root.classList.remove("lock");
-        modal.classList.remove("open");
+        modalCart.classList.remove("open");
       }
     });
 
-    const closeBtn = modal.querySelector(".modal__close");
+    const closeBtn = modalCart.querySelector(".modal__close");
 
     closeBtn.addEventListener("click", () => {
       root.classList.remove("lock");
-      modal.classList.remove("open");
+      modalCart.classList.remove("open");
+    });
+  }
+
+  // modal login
+  const modalLogin = document.querySelector(".modal--login");
+  const loginModalBtn = document.querySelector("#profile-change-login");
+  if (modalLogin && loginModalBtn) {
+    loginModalBtn.addEventListener("click", () => {
+      root.classList.add("lock");
+      modalLogin.classList.add("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal--login")) {
+        root.classList.remove("lock");
+        modalLogin.classList.remove("open");
+      }
+    });
+
+    const closeBtn = modalLogin.querySelector(".modal__close");
+
+    closeBtn.addEventListener("click", () => {
+      root.classList.remove("lock");
+      modalLogin.classList.remove("open");
+    });
+  }
+
+  // modal password
+  const modalPassword = document.querySelector(".modal--password");
+  const passwordModalBtn = document.querySelector("#profile-change-password");
+  if (modalPassword && passwordModalBtn) {
+    passwordModalBtn.addEventListener("click", () => {
+      root.classList.add("lock");
+      modalPassword.classList.add("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal--password")) {
+        root.classList.remove("lock");
+        modalPassword.classList.remove("open");
+      }
+    });
+
+    const closeBtn = modalPassword.querySelector(".modal__close");
+
+    closeBtn.addEventListener("click", () => {
+      root.classList.remove("lock");
+      modalPassword.classList.remove("open");
     });
   }
 
@@ -268,6 +316,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     closeBtn.addEventListener("click", () => {
       modalBonuses.classList.remove("open");
+    });
+  }
+
+  // history accordion
+  const historyItem = document.querySelectorAll(".history__item");
+  if (historyItem) {
+    historyItem.forEach((item) => {
+      const historyHead = item.querySelector(".history__head");
+
+      historyHead.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
     });
   }
 

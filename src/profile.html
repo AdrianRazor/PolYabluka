@@ -447,7 +447,7 @@
             <svg width="30" height="30">
               <use xlink:href="img/sprite.svg#edit"></use>
             </svg>
-            <h3 class="headline">Особисті данні</h3>
+            <h3 class="headline">Особисті дані</h3>
           </div>
           <div class="profile__wrapper">
             <table class="profile__table">
@@ -526,6 +526,153 @@
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="profile">
+        <div class="container">
+          <div class="profile__headline">
+            <svg width="30" height="30">
+              <use xlink:href="img/sprite.svg#edit"></use>
+            </svg>
+            <h3 class="headline">Контактні дані</h3>
+          </div>
+          <div class="profile__wrapper">
+            <table class="profile__table">
+              <tbody class="profile__tbody">
+                <tr class="profile__item">
+                  <th class="text">Телефон</th>
+                  <td class="text"><p>+38(099)987-99-00</p></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="profile__table">
+              <tbody class="profile__tbody">
+                <tr class="profile__item">
+                  <th class="text">E-mail</th>
+                  <td class="text"><p>tkachtem@gmail.com</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="profile__buttons">
+            <button
+              id="profile-change-login"
+              class="btn btn--outline profile__btn"
+            >
+              Змінити логін
+            </button>
+            <button
+              id="profile-change-password"
+              class="btn btn--outline profile__btn"
+            >
+              Змінити пароль
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="history">
+        <div class="container">
+          <h2 class="title">Історія замовлень</h2>
+          <ul class="history__list">
+            <li class="history__item">
+              <div class="history__head">
+                <p>№145 456 від 12.04.2022</p>
+                <p>Сума замовлення:</p>
+                <div class="history__img-preview">
+                  <img src="img/img-7.png" alt="product" />
+                </div>
+                <svg class="history__icon-arrow" width="24" height="24">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+                <p class="text text--aqua">Виконане</p>
+                <h3 class="headline">6 760 грн</h3>
+              </div>
+              <div class="history__body">
+                <ul class="history__sublist">
+                  <li class="history__subitem">
+                    <div class="history__img">
+                      <img src="img/img-7.png" alt="product" />
+                    </div>
+                    <p class="text">Apple AirPods Pro with MagSafe</p>
+                    <div class="history__price">
+                      <p>
+                        Кількість:
+                        <strong>1</strong>
+                      </p>
+                      <h3 class="headline">4 890 грн</h3>
+                    </div>
+                    <button class="btn btn--outline history__btn">
+                      Залишити відгук
+                    </button>
+                  </li>
+                  <li class="history__subitem">
+                    <div class="history__img">
+                      <img src="img/img-3.png" alt="product" />
+                    </div>
+                    <p class="text">Apple Watch Pro with MagSafe</p>
+                    <div class="history__price">
+                      <p>
+                        Кількість:
+                        <strong>1</strong>
+                      </p>
+                      <h3 class="headline">9 000 грн</h3>
+                    </div>
+                    <p class="text">Кешбек нараховано</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="history__item">
+              <div class="history__head">
+                <p>№145 456 від 12.04.2022</p>
+                <p>Сума замовлення:</p>
+                <div class="history__img-preview">
+                  <img src="img/img-7.png" alt="product" />
+                </div>
+                <svg class="history__icon-arrow" width="24" height="24">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+                <p class="text text--aqua">Виконане</p>
+                <h3 class="headline">6 760 грн</h3>
+              </div>
+              <div class="history__body">
+                <ul class="history__sublist">
+                  <li class="history__subitem">
+                    <div class="history__img">
+                      <img src="img/img-7.png" alt="product" />
+                    </div>
+                    <p class="text">Apple AirPods Pro with MagSafe</p>
+                    <div class="history__price">
+                      <p>
+                        Кількість:
+                        <strong>1</strong>
+                      </p>
+                      <h3 class="headline">4 890 грн</h3>
+                    </div>
+                    <button class="btn btn--outline history__btn">
+                      Залишити відгук
+                    </button>
+                  </li>
+                  <li class="history__subitem">
+                    <div class="history__img">
+                      <img src="img/img-3.png" alt="product" />
+                    </div>
+                    <p class="text">Apple Watch Pro with MagSafe</p>
+                    <div class="history__price">
+                      <p>
+                        Кількість:
+                        <strong>1</strong>
+                      </p>
+                      <h3 class="headline">9 000 грн</h3>
+                    </div>
+                    <p class="text">Кешбек нараховано</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -651,6 +798,85 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal--login">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <h3 class="headline">Змінити логін:</h3>
+          <form class="form">
+            <div class="form__row">
+              <input
+                type="text"
+                name="old-login"
+                id="old-login"
+                placeholder="Старий логін"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="text"
+                name="new-login"
+                id="new-login"
+                placeholder="Новий логін"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Змінити логін</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--password">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <h3 class="headline">Змінити пароль:</h3>
+          <form class="form">
+            <div class="form__row">
+              <input
+                type="password"
+                name="old-password"
+                id="old-password"
+                placeholder="Старий пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="password"
+                name="new-password"
+                id="new-password"
+                placeholder="Новий пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="password"
+                name="new-password-repeat"
+                id="new-password-repeat"
+                placeholder="Повторiть новий пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Змінити пароль</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
