@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const burger = document.querySelector(".header__burger");
   if (burger && header) {
     burger.addEventListener("click", () => {
+      root.classList.toggle("lock");
       burger.classList.toggle("active");
       header.classList.toggle("open");
     });
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const headerClose = document.querySelector(".header__close");
     if (headerClose) {
       headerClose.addEventListener("click", () => {
+        root.classList.remove("lock");
         burger.classList.remove("active");
         header.classList.remove("open");
       });
@@ -20,9 +22,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     window.addEventListener("click", (e) => {
       if (e.target.classList.contains("header__mobile")) {
+        root.classList.remove("lock");
         burger.classList.remove("active");
         header.classList.remove("open");
       }
+    });
+  }
+
+  // header mobile
+  if (window.innerWidth < 1280) {
+    const headerMobile = document.querySelector(".header__mobile");
+    const navItem = headerMobile.querySelectorAll(".nav__item");
+
+    navItem.forEach((item) => {
+      const link = item.querySelector(".nav__item > a");
+
+      link.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+
+      const subItem = document.querySelectorAll(".nav__sub-item");
+
+      subItem.forEach((el) => {
+        const subLink = el.querySelector(".nav__sub-item > a");
+        const btnBack = el.querySelector(".nav__end-back");
+
+        if (subLink) {
+          subLink.addEventListener("click", () => {
+            el.classList.add("open");
+          });
+        }
+
+        if (btnBack) {
+          btnBack.addEventListener("click", () => {
+            el.classList.remove("open");
+          });
+        }
+      });
     });
   }
 

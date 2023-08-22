@@ -41,3 +41,30 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .search {
+    &__icon {
+      width: 24px;
+      height: 24px;
+
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover {
+      & input {
+        width: 146px;
+      }
+    }
+
+    & input {
+      border-bottom-width: 1px;
+      padding-bottom: 6px;
+
+      font-size: 14px;
+    }
+  }
+}

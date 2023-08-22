@@ -149,16 +149,24 @@
 
 @media (max-width: 1279px) {
   .modal {
-    &__window {
-      max-width: 60%;
+    &--cart {
+      & .modal {
+        &__window {
+          max-width: 60%;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 1023px) {
   .modal {
-    &__window {
-      max-width: 85%;
+    &--cart {
+      & .modal {
+        &__window {
+          max-width: 85%;
+        }
+      }
     }
   }
 }
@@ -166,8 +174,7 @@
 @media (max-width: 767px) {
   .modal {
     &__window {
-      max-width: 100%;
-      padding: 0 15px;
+      max-width: 350px;
     }
 
     &__content {
@@ -187,6 +194,19 @@
         width: 18px;
         height: 18px;
         fill: $black;
+      }
+    }
+
+    &--cart {
+      & .modal {
+        &__window {
+          max-width: 100%;
+          padding: 0 15px;
+        }
+
+        &__close {
+          top: 0;
+        }
       }
     }
   }

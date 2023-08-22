@@ -142,3 +142,28 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .bonus {
+    &__top {
+      padding: 15px;
+      gap: 15px;
+    }
+
+    &__input {
+      padding: 15px 20px;
+
+      font-size: 14px;
+    }
+
+    &__btn {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__bottom {
+      padding: 15px;
+      gap: 20px;
+    }
+  }
+}

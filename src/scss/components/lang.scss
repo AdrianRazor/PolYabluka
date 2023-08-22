@@ -115,3 +115,27 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .lang {
+    min-width: 56px;
+
+    &__wrapper {
+      top: calc(100% + 20px);
+    }
+
+    &__icon {
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__arrow {
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
