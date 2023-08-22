@@ -105,8 +105,11 @@
         <div class="container">
           <div class="header__wrapper">
             <button class="burger header__burger">
-              <svg width="36" height="22">
+              <svg width="36" height="22" class="burger__icon">
                 <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+              <svg width="24" height="24" class="burger__x">
+                <use xlink:href="img/sprite.svg#close"></use>
               </svg>
             </button>
             <a href="index.html" class="logo">
@@ -115,7 +118,7 @@
             <nav class="nav header__nav header__nav--desktop">
               <ul class="nav__list">
                 <li class="text nav__item nav__item--sub">
-                  <a href="#"> Каталог товарів </a>
+                  <a href="catalog.html"> Каталог товарів </a>
                   <div class="nav__sub">
                     <ul class="nav__sub-list">
                       <li class="nav__sub-item">
@@ -227,7 +230,7 @@
                 </svg>
                 <span>2</span>
               </a>
-              <a href="account.html">
+              <a href="profile.html">
                 <svg width="40" height="40">
                   <use xlink:href="img/sprite.svg#avatar"></use>
                 </svg>
@@ -318,16 +321,22 @@
           </div>
           <nav class="nav header__nav">
             <ul class="nav__list">
-              <li class="text nav__item nav__item--sub">
-                <a href="#"> Каталог товарів </a>
+              <li class="text nav__item">
+                <a> Каталог товарів </a>
                 <div class="nav__sub">
                   <ul class="nav__sub-list">
                     <li class="nav__sub-item">
-                      <a href="#">iPhone</a>
+                      <a>iPhone</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">Watch</a>
+                      <a>Watch</a>
                       <div class="nav__end">
+                        <button class="nav__end-back">
+                          <svg width="28" height="28">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                          <span>Watch</span>
+                        </button>
                         <ul class="nav__end-list">
                           <li class="nav__end-item">
                             <a href="#" class="nav__end-link">
@@ -378,43 +387,43 @@
                       </div>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">AirPods</a>
+                      <a>AirPods</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">iPad</a>
+                      <a>iPad</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">MacBook</a>
+                      <a>MacBook</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">Mac</a>
+                      <a>Mac</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">Gadgets</a>
+                      <a>Gadgets</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">Аксесуари</a>
+                      <a>Аксесуари</a>
                     </li>
                     <li class="nav__sub-item">
-                      <a href="#">Зарядні пристрої</a>
+                      <a>Зарядні пристрої</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="text nav__item">
-                <a href="#"> iPhone </a>
+                <a> iPhone </a>
               </li>
               <li class="text nav__item">
-                <a href="#"> iPad </a>
+                <a> iPad </a>
               </li>
               <li class="text nav__item">
-                <a href="#"> Mac </a>
+                <a> Mac </a>
               </li>
               <li class="text nav__item">
-                <a href="#"> Aксесуари </a>
+                <a> Aксесуари </a>
               </li>
               <li class="text nav__item">
-                <a href="#"> Акції </a>
+                <a> Акції </a>
               </li>
             </ul>
           </nav>

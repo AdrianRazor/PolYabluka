@@ -8,63 +8,6 @@
     gap: 20px;
   }
 
-  &__row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__input {
-    width: 100%;
-    background-color: $light;
-    border-radius: 99px;
-    padding: 20px 30px;
-    border: 2px solid $light;
-
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 110%;
-
-    transition: 0.2s ease;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    &[type="number"] {
-      -moz-appearance: textfield;
-    }
-
-    &:focus {
-      border-color: $aqua;
-    }
-  }
-
-  &__btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: $black;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    transition: 0.2s ease;
-
-    & svg {
-      fill: $white;
-      transform: rotate(-90deg);
-    }
-
-    &:hover {
-      background-color: $aqua;
-    }
-  }
-
   &__bottom {
     padding: 30px;
     background-color: $aqua;

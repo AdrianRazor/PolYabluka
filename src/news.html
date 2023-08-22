@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <div class="header__top">
+      <div class="header__top header__top--desktop">
         <div class="container">
           <div class="header__wrapper">
             <div class="header__langs">
@@ -104,13 +104,21 @@
       <div class="header__bottom">
         <div class="container">
           <div class="header__wrapper">
+            <button class="burger header__burger">
+              <svg width="36" height="22" class="burger__icon">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+              <svg width="24" height="24" class="burger__x">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </button>
             <a href="index.html" class="logo">
               <img src="img/logo.png" alt="logo" />
             </a>
-            <nav class="nav">
+            <nav class="nav header__nav header__nav--desktop">
               <ul class="nav__list">
                 <li class="text nav__item nav__item--sub">
-                  <a href="#"> Каталог товарів </a>
+                  <a href="catalog.html"> Каталог товарів </a>
                   <div class="nav__sub">
                     <ul class="nav__sub-list">
                       <li class="nav__sub-item">
@@ -216,19 +224,209 @@
                 </svg>
                 <span>1</span>
               </a>
-              <a href="cart.html">
+              <a id="cart">
                 <svg width="40" height="40">
                   <use xlink:href="img/sprite.svg#cart"></use>
                 </svg>
                 <span>2</span>
               </a>
-              <a href="account.html">
+              <a href="profile.html">
                 <svg width="40" height="40">
                   <use xlink:href="img/sprite.svg#avatar"></use>
                 </svg>
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="header__mobile">
+        <div class="header__window">
+          <div class="header__top">
+            <div class="container">
+              <div class="header__wrapper">
+                <div class="header__langs">
+                  <div class="lang">
+                    <div class="lang__head">
+                      <div class="lang__current">
+                        <div class="lang__icon">
+                          <svg width="36" height="36">
+                            <use xlink:href="img/sprite.svg#hryvnya"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="lang__arrow">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="lang__wrapper">
+                      <ul class="lang__body">
+                        <li class="lang__item">
+                          <div class="lang__icon">
+                            <svg width="36" height="36">
+                              <use xlink:href="img/sprite.svg#dollar"></use>
+                            </svg>
+                          </div>
+                        </li>
+                        <li class="lang__item">
+                          <div class="lang__icon">
+                            <svg width="36" height="36">
+                              <use xlink:href="img/sprite.svg#zloty"></use>
+                            </svg>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="lang">
+                    <div class="lang__head">
+                      <div class="lang__current">
+                        <p class="text lang__text">Укр</p>
+                      </div>
+                      <div class="lang__arrow">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="lang__wrapper">
+                      <ul class="lang__body">
+                        <li class="lang__item">
+                          <p class="text lang__text">Eng</p>
+                        </li>
+                        <li class="lang__item">
+                          <p class="text lang__text">Pol</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="search header__search">
+                  <input type="text" />
+                  <div class="search__icon">
+                    <svg width="36" height="36">
+                      <use xlink:href="img/sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </div>
+                <button class="header__close">
+                  <svg width="28" height="28">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="text nav__item">
+                <a> Каталог товарів </a>
+                <div class="nav__sub">
+                  <ul class="nav__sub-list">
+                    <li class="nav__sub-item">
+                      <a>iPhone</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>Watch</a>
+                      <div class="nav__end">
+                        <button class="nav__end-back">
+                          <svg width="28" height="28">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                          <span>Watch</span>
+                        </button>
+                        <ul class="nav__end-list">
+                          <li class="nav__end-item">
+                            <a href="#" class="nav__end-link">
+                              <div class="nav__img">
+                                <img src="img/img-3.png" alt="img" />
+                              </div>
+                              <h3 class="headline">Series 8</h3>
+                              <p class="text">41 мм <br />45 мм</p>
+                            </a>
+                          </li>
+                          <li class="nav__end-item">
+                            <a href="#" class="nav__end-link">
+                              <div class="nav__img">
+                                <img src="img/img-3.png" alt="img" />
+                              </div>
+                              <h3 class="headline">Series 8</h3>
+                              <p class="text">41 мм <br />45 мм</p>
+                            </a>
+                          </li>
+                          <li class="nav__end-item">
+                            <a href="#" class="nav__end-link">
+                              <div class="nav__img">
+                                <img src="img/img-3.png" alt="img" />
+                              </div>
+                              <h3 class="headline">Series 8</h3>
+                              <p class="text">41 мм <br />45 мм</p>
+                            </a>
+                          </li>
+                          <li class="nav__end-item">
+                            <a href="#" class="nav__end-link">
+                              <div class="nav__img">
+                                <img src="img/img-3.png" alt="img" />
+                              </div>
+                              <h3 class="headline">Series 8</h3>
+                              <p class="text">41 мм <br />45 мм</p>
+                            </a>
+                          </li>
+                          <li class="nav__end-item">
+                            <a href="#" class="nav__end-link">
+                              <div class="nav__img">
+                                <img src="img/img-3.png" alt="img" />
+                              </div>
+                              <h3 class="headline">Series 8</h3>
+                              <p class="text">41 мм <br />45 мм</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>AirPods</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>iPad</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>MacBook</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>Mac</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>Gadgets</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>Аксесуари</a>
+                    </li>
+                    <li class="nav__sub-item">
+                      <a>Зарядні пристрої</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="text nav__item">
+                <a> iPhone </a>
+              </li>
+              <li class="text nav__item">
+                <a> iPad </a>
+              </li>
+              <li class="text nav__item">
+                <a> Mac </a>
+              </li>
+              <li class="text nav__item">
+                <a> Aксесуари </a>
+              </li>
+              <li class="text nav__item">
+                <a> Акції </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>

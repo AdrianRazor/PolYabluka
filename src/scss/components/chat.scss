@@ -21,8 +21,78 @@
     }
   }
 
-  &.active {
+  &__window {
+    width: 580px;
+    border-radius: 50px;
+    background-color: #ededed;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: calc(100% + 30px);
+    right: 0;
+    z-index: 10;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+  }
+
+  &__top {
+    padding: 30px;
+    background-color: $aqua;
+  }
+
+  &__headline {
+    color: $white;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    color: $white;
+  }
+
+  &__body {
+    height: 340px;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+  }
+
+  &__messages {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__message {
+    max-width: 370px;
+    width: 100%;
+    padding: 20px 25px;
+    background-color: $white;
+    border-radius: 35px 35px 35px 0;
+
+    &--reverse {
+      margin-left: auto;
+      border-radius: 35px 35px 0 35px;
+    }
+  }
+
+  &__bottom {
+    padding: 30px;
+    background-color: $aqua;
+  }
+
+  &.open {
     & .chat {
+      &__window {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       &__btn {
         background-color: $white;
         border-color: $aqua;
