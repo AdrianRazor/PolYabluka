@@ -28,6 +28,15 @@
     background-color: $black;
   }
 
+  &--white {
+    background-color: $white;
+    color: $aqua;
+
+    &:hover {
+      background-color: $light;
+    }
+  }
+
   &--outline {
     border-color: $aqua;
     color: $aqua;
