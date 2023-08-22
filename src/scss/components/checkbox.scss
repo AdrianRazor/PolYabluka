@@ -12,7 +12,7 @@
     &:checked ~ label {
       &::before {
         background-color: $black;
-        border-color: #e3e3e3;
+        border-color: $light-grey;
       }
 
       & .checkbox__color {
@@ -38,7 +38,7 @@
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background-color: #e3e3e3;
+      background-color: $light-grey;
       border: 6px solid transparent;
       flex-shrink: 0;
 

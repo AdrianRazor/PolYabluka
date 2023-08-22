@@ -1,0 +1,27 @@
+.about-engraving {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__img {
+    margin-top: 25px;
+  }
+
+  &__text {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-engraving {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &__img {
+      margin-top: 15px;
+    }
+
+    &__text {
+      margin-top: 15px;
+    }
+  }
+}

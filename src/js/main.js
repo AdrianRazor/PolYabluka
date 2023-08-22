@@ -106,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const descriptionBtn = document.querySelector(".description__show");
   const descriptionContent = document.querySelector(".description__content");
 
+  const engravingBtn = document.querySelectorAll(".engraving__btn-more");
+  const engravingInfo = document.querySelectorAll(".engraving__info");
+
   if (servicesBtn && servicesText) {
     servicesBtn.addEventListener("click", () => {
       servicesBtn.classList.toggle("active");
@@ -122,6 +125,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     descriptionBtn.addEventListener("click", () => {
       descriptionBtn.classList.toggle("active");
       descriptionContent.classList.toggle("show");
+    });
+  }
+  if (engravingBtn && engravingInfo) {
+    engravingBtn.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        engravingInfo[i].classList.toggle("show");
+      });
     });
   }
 
@@ -331,6 +342,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // tabs
+  const tabItem = document.querySelectorAll(".engraving__tab");
+  const tabContent = document.querySelectorAll(".engraving__content");
+  if (tabItem && tabContent) {
+    tabItem.forEach((tab, i) => {
+      tab.addEventListener("click", () => {
+        tabItem.forEach((el) => el.classList.remove("active"));
+        tabContent.forEach((el) => el.classList.remove("active"));
+
+        tab.classList.add("active");
+        tabContent[i].classList.add("active");
+      });
+    });
+  }
+
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {
@@ -458,6 +484,108 @@ document.addEventListener("DOMContentLoaded", function (event) {
     splideProductMain.sync(splideProductThumbnails);
     splideProductMain.mount();
     splideProductThumbnails.mount();
+  }
+
+  // gallery in tabs
+  const galleryMainOptions = {
+    type: "fade",
+    height: 560,
+    pagination: false,
+    arrows: false,
+    breakpoints: {
+      767: {
+        height: 250,
+      },
+    },
+  };
+
+  const galleryThumbOptions = {
+    direction: "ttb",
+    width: 120,
+    height: 420,
+    fixedHeight: 120,
+    gap: 30,
+    focus: "center",
+    isNavigation: true,
+    pagination: false,
+
+    breakpoints: {
+      767: {
+        width: 60,
+        height: 200,
+        fixedHeight: 60,
+        gap: 10,
+      },
+    },
+  };
+
+  if (
+    document.querySelector(".splideKeyboardsMain") &&
+    document.querySelector(".splideKeyboardsThumbnails")
+  ) {
+    var splideKeyboardsMain = new Splide(
+      ".splideKeyboardsMain",
+      galleryMainOptions
+    );
+    var splideKeyboardsThumbnails = new Splide(
+      ".splideKeyboardsThumbnails",
+      galleryThumbOptions
+    );
+
+    splideKeyboardsMain.sync(splideKeyboardsThumbnails);
+    splideKeyboardsMain.mount();
+    splideKeyboardsThumbnails.mount();
+  }
+
+  if (
+    document.querySelector(".splideIpadMain") &&
+    document.querySelector(".splideIpadThumbnails")
+  ) {
+    var splideIpadMain = new Splide(".splideIpadMain", galleryMainOptions);
+    var splideIpadThumbnails = new Splide(
+      ".splideIpadThumbnails",
+      galleryThumbOptions
+    );
+
+    splideIpadMain.sync(splideIpadThumbnails);
+    splideIpadMain.mount();
+    splideIpadThumbnails.mount();
+  }
+
+  if (
+    document.querySelector(".splideMacBookMain") &&
+    document.querySelector(".splideMacBookThumbnails")
+  ) {
+    var splideMacBookMain = new Splide(
+      ".splideMacBookMain",
+      galleryMainOptions
+    );
+    var splideMacBookThumbnails = new Splide(
+      ".splideMacBookThumbnails",
+      galleryThumbOptions
+    );
+
+    splideMacBookMain.sync(splideMacBookThumbnails);
+    splideMacBookMain.mount();
+    splideMacBookThumbnails.mount();
+  }
+
+  if (
+    document.querySelector(".splideAccessoriesMain") &&
+    document.querySelector(".splideAccessoriesThumbnails")
+  ) {
+    var splideAccessoriesMain = new Splide(
+      ".splideAccessoriesMain",
+      galleryMainOptions
+    );
+    var splideAccessoriesThumbnails = new Splide(
+      ".splideAccessoriesThumbnails",
+      galleryThumbOptions
+    );
+
+    splideAccessoriesMain.sync(splideAccessoriesThumbnails);
+    splideAccessoriesMain.mount();
+    splideAccessoriesThumbnails.mount();
   }
 
   function setActiveClass(element) {
