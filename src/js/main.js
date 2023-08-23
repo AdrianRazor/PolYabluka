@@ -145,6 +145,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const engravingBtn = document.querySelectorAll(".engraving__btn-more");
   const engravingInfo = document.querySelectorAll(".engraving__info");
 
+  const tradeBtn = document.querySelector(".trade__btn-more");
+  const tradeContent = document.querySelector(".trade__content");
+
   if (servicesBtn && servicesText) {
     servicesBtn.addEventListener("click", () => {
       servicesBtn.classList.toggle("active");
@@ -169,6 +172,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         btn.classList.toggle("active");
         engravingInfo[i].classList.toggle("show");
       });
+    });
+  }
+  if (tradeBtn && tradeContent) {
+    tradeBtn.addEventListener("click", () => {
+      tradeBtn.classList.toggle("active");
+      tradeContent.classList.toggle("show");
     });
   }
 
@@ -374,6 +383,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       historyHead.addEventListener("click", () => {
         item.classList.toggle("open");
+      });
+    });
+  }
+
+  // trade in accordion
+  const deviceAccordion = document.querySelectorAll(".device__accordion");
+  if (deviceAccordion) {
+    deviceAccordion.forEach((acc) => {
+      const head = acc.querySelector(".device__head");
+      head.addEventListener("click", () => {
+        acc.classList.toggle("open");
       });
     });
   }

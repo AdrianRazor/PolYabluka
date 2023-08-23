@@ -1,0 +1,59 @@
+.trade {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__block {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+
+  &__btn-call {
+    max-width: 460px;
+    margin: 50px auto 0;
+  }
+
+  &__content {
+    max-height: 365px;
+    overflow: hidden;
+
+    & p + p,
+    & p + ul,
+    & ul + p,
+    & ul + ul,
+    & li + li {
+      margin-top: 10px;
+    }
+
+    & li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+
+    &.show {
+      max-height: initial;
+    }
+  }
+
+  &__btn-more {
+    margin: 30px auto 0;
+  }
+}

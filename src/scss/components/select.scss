@@ -1,8 +1,6 @@
 .select {
   position: relative;
   width: 100%;
-  border-radius: 25px;
-  background-color: $light;
 
   cursor: pointer;
 
@@ -11,7 +9,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
     padding: 15px 20px;
+    border-radius: 25px;
+    background-color: $light;
 
     & p {
       font-size: 13px;
@@ -61,6 +62,18 @@
     @media (any-hover: hover) {
       &:hover {
         color: $aqua;
+      }
+    }
+  }
+
+  &--white {
+    & .select {
+      &__head {
+        background-color: $white;
+      }
+
+      &__body {
+        background-color: $white;
       }
     }
   }
