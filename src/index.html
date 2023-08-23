@@ -1053,7 +1053,7 @@
             </button>
           </div>
 
-          <form class="form form--modal">
+          <form class="form form--cart">
             <div class="form__checkbox">
               <div class="checkbox">
                 <input type="checkbox" id="reciever" />
@@ -1065,8 +1065,8 @@
             <div class="form__row">
               <input
                 type="number"
-                name="phone"
-                id="phone"
+                name="phoneNumber"
+                id="phoneNumber"
                 placeholder="Ваш номер телефону"
               />
               <p class="form__error active">
@@ -1126,7 +1126,7 @@
             </button>
           </div>
 
-          <form class="form form--modal">
+          <form class="form form--cart">
             <div class="form__checkbox">
               <div class="checkbox checkbox--columns">
                 <input type="radio" name="recieve-method" id="shop" />
@@ -1212,7 +1212,7 @@
             </button>
           </div>
 
-          <form class="form form--modal">
+          <form class="form form--cart">
             <div class="form__checkbox">
               <div class="checkbox">
                 <input type="radio" name="payment" id="cash" />
@@ -1476,6 +1476,120 @@
                 від вартості товару
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--login">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <div class="modal__enter">
+            <h3 class="headline">Вхід:</h3>
+            <div class="modal__registration">
+              <button class="modal__enter-btn">
+                <svg width="34" height="34">
+                  <use xlink:href="img/sprite.svg#google"></use>
+                </svg>
+              </button>
+              <button class="modal__enter-btn">
+                <svg width="34" height="34">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <form class="form form--modal">
+            <div class="form__row">
+              <input
+                type="number"
+                name="phoneLogin"
+                id="phoneLogin"
+                placeholder="Телефон"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="passwordLogin"
+                name="passwordLogin"
+                id="password"
+                placeholder="Пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Увійти</button>
+          </form>
+          <div class="modal__links">
+            <button class="text modal__link">Зареєструватися</button>
+            <button class="text modal__link">Забули пароль?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--registration">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <div class="modal__enter">
+            <h3 class="headline">Реєстрація:</h3>
+            <div class="modal__registration">
+              <button class="modal__enter-btn">
+                <svg width="34" height="34">
+                  <use xlink:href="img/sprite.svg#google"></use>
+                </svg>
+              </button>
+              <button class="modal__enter-btn">
+                <svg width="34" height="34">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <form class="form form--modal">
+            <div class="form__row">
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="Телефон"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="password"
+                name="passwordRepeat"
+                id="passwordRepeat"
+                placeholder="Повторити пароль"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Зареєструватися</button>
+          </form>
+          <div class="modal__links">
+            <button class="text modal__link">Або увійдіть</button>
           </div>
         </div>
       </div>

@@ -3,10 +3,6 @@
   flex-direction: column;
   gap: 20px;
 
-  &--modal {
-    margin-top: 25px;
-  }
-
   &__checkbox {
     padding-bottom: 20px;
     border-bottom: 2px solid $light;
@@ -90,6 +86,19 @@
     margin-top: 15px;
   }
 
+  &--cart {
+    margin-top: 25px;
+  }
+
+  &--modal {
+    gap: 15px;
+
+    & input {
+      padding: 20px;
+      font-size: 21px;
+    }
+  }
+
   &--min {
     flex-direction: row;
     align-items: center;
@@ -131,10 +140,6 @@
   .form {
     gap: 15px;
 
-    &--modal {
-      margin-top: 20px;
-    }
-
     &__checkbox {
       padding-bottom: 15px;
       border-bottom-width: 2px;
@@ -168,6 +173,25 @@
 
     &__select {
       margin-top: 15px;
+    }
+
+    &--cart {
+      margin-top: 20px;
+    }
+
+    &--modal {
+      gap: 10px;
+
+      & input {
+        padding: 11px 20px;
+      }
+
+      & .form {
+        &__btn {
+          max-width: 220px;
+          margin: 0 auto;
+        }
+      }
     }
 
     &--min {
