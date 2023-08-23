@@ -1,0 +1,255 @@
+.compare {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+  }
+
+  &__btn {
+    padding: 15px 30px;
+    border-radius: 99px;
+    border: 2px solid transparent;
+    background-color: $light;
+
+    font-weight: 500;
+    transition: 0.2s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $white;
+        border-color: $aqua;
+      }
+    }
+
+    &.active {
+      border-color: $aqua;
+    }
+  }
+
+  &__clear {
+    margin-left: auto;
+    padding-bottom: 6px;
+    border-bottom: 2px solid $aqua;
+
+    transition: 0.2s ease;
+
+    &:hover {
+      border-bottom-color: $black;
+      color: $aqua;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 25px;
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 10px;
+
+      &-thumb {
+        background-color: $light-grey;
+      }
+    }
+  }
+
+  & table {
+    width: 100%;
+
+    & thead {
+      & tr {
+        position: relative;
+        gap: 0;
+
+        & td {
+          flex-basis: calc(30% + 50px);
+
+          padding-top: 30px;
+          padding-bottom: 40px;
+
+          border-top: 2px solid $border;
+          border-bottom: 2px solid $border;
+
+          &:first-of-type {
+            flex-basis: calc(30% + 25px);
+          }
+
+          &:last-of-type {
+            flex-basis: calc(30% + 25px);
+          }
+
+          &:not(:first-of-type) {
+            padding-left: 25px;
+          }
+
+          &:not(:last-of-type) {
+            padding-right: 25px;
+          }
+        }
+      }
+    }
+
+    & tbody {
+      display: block;
+      margin-top: 25px;
+      padding-bottom: 15px;
+    }
+
+    & tr {
+      display: flex;
+      gap: 50px;
+
+      & + tr {
+        margin-top: 15px;
+      }
+    }
+
+    & td {
+      flex-basis: 30%;
+      flex-shrink: 0;
+
+      & > span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .compare {
+    & table {
+      & thead {
+        & tr {
+          & td {
+            flex-basis: initial;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+
+            &:first-of-type {
+              flex-basis: initial;
+            }
+
+            &:last-of-type {
+              flex-basis: initial;
+            }
+
+            &:not(:first-of-type) {
+              padding-left: initial;
+            }
+
+            &:not(:last-of-type) {
+              padding-right: initial;
+            }
+          }
+        }
+      }
+
+      & tr {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      & tbody {
+        padding-bottom: initial;
+
+        & td {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+
+          &:has(span) {
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 20px;
+              border-bottom: 2px dashed $border;
+
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+            }
+          }
+
+          & > span {
+            display: block;
+            background-color: $white;
+          }
+
+          & p {
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .compare {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &__controls {
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    &__btn {
+      padding: 10px 20px;
+      border-width: 1px;
+    }
+
+    &__clear {
+      margin-left: initial;
+    }
+
+    &__wrapper {
+      margin-top: 20px;
+    }
+
+    & table {
+      & thead {
+        & tr {
+          & td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+
+      & tr {
+        flex-direction: column;
+        gap: 5px;
+
+        & + tr {
+          margin-top: 10px;
+        }
+      }
+
+      & tbody {
+        margin-top: 20px;
+
+        & td {
+          &:has(span) {
+            &::after {
+              height: 13px;
+              border-bottom-width: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

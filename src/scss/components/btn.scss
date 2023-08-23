@@ -20,6 +20,10 @@
 
   transition: 0.2s ease;
 
+  & svg {
+    flex-shrink: 0;
+  }
+
   &:hover {
     background-color: $aqua;
   }

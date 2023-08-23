@@ -60,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &__btn {
@@ -107,6 +108,66 @@
 
       & svg {
         fill: $white;
+      }
+    }
+  }
+
+  &--compare {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 25px 20px;
+
+    & .card {
+      &__img {
+        width: 120px;
+        height: 120px;
+        border: 1px solid $border;
+        padding: 0;
+
+        grid-row: span 2;
+      }
+
+      &__price {
+        height: initial;
+        margin-bottom: initial;
+      }
+
+      &__buttons {
+        grid-column: span 2;
+      }
+
+      &__btn {
+        max-width: 180px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .card {
+    &--compare {
+      grid-template-columns: auto 1fr auto;
+      gap: 10px 20px;
+
+      & .card {
+        &__price {
+          order: 1;
+        }
+
+        &__buttons {
+          grid-column: initial;
+          grid-row: span 2;
+        }
+
+        &__btn {
+          max-width: initial;
+          width: 60px;
+
+          & span {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -159,6 +220,27 @@
 
       &--compare {
         width: 30px;
+      }
+    }
+
+    &--compare {
+      gap: 10px;
+
+      & .card {
+        &__img {
+          width: 70px;
+          height: 70px;
+        }
+
+        &__buttons {
+          gap: 10px;
+        }
+
+        &__btn {
+          width: 30px;
+          height: 30px;
+          border-width: 1px;
+        }
       }
     }
   }
