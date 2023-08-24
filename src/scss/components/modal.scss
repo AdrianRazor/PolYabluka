@@ -37,6 +37,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    & .headline > span {
+      display: block;
+      margin-top: 5px;
+    }
   }
 
   &__enter {

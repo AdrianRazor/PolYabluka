@@ -52,8 +52,36 @@
       max-height: initial;
     }
   }
+}
 
-  &__btn-more {
-    margin: 30px auto 0;
+@media (max-width: 1279px) {
+  .trade {
+    &__block {
+      grid-template-columns: initial;
+      gap: 20px;
+    }
+
+    &__content {
+      max-height: 500px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .trade {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    &__block {
+      margin-top: 15px;
+    }
+
+    &__btn-call {
+      margin: 20px auto 0;
+    }
+
+    &__content {
+      max-height: 125px;
+    }
   }
 }

@@ -598,6 +598,8 @@
                   <li class="device__item">Apple AirPods</li>
                   <li class="device__item">Iнше</li>
                 </ul>
+
+                <!-- Вариант 1 -->
                 <div class="device__filters">
                   <div class="select select--white device__select">
                     <div class="select__head">
@@ -672,6 +674,84 @@
                   </p>
                   <span class="device__decor"></span>
                   <p class="headline">від 85 500 грн</p>
+                </div>
+
+                <!-- Вариант Iнше -->
+                <div class="device__field hidden">
+                  <input
+                    type="text"
+                    placeholder="Хочу обміняти на декілька девайсів"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="device__accordion">
+          <div class="device__head">
+            <div class="container">
+              <div class="device__head-block">
+                <h2 class="title device__title">Крок 3: Наша пропозиція</h2>
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="device__body">
+            <div class="container device__container">
+              <!-- Вариант 1 -->
+              <div class="device__inner">
+                <div class="device__img">
+                  <img src="img/img-26.png" alt="product" />
+                </div>
+                <div class="device__info">
+                  <h3 class="title">Apple iMac 24 with Retina 4.5K</h3>
+                  <div class="device__colors">
+                    <p class="headline">Можливі кольори:</p>
+                    <ul class="device__colors-list">
+                      <li
+                        class="device__colors-item"
+                        style="background-color: #898989"
+                      ></li>
+                      <li
+                        class="device__colors-item"
+                        style="background-color: #68cef8"
+                      ></li>
+                      <li
+                        class="device__colors-item"
+                        style="background-color: #9f87c0"
+                      ></li>
+                      <li
+                        class="device__colors-item"
+                        style="background-color: #ececec"
+                      ></li>
+                    </ul>
+                  </div>
+                  <div class="device__price">
+                    <p class="text">Ціна до обміну: 55 600 грн</p>
+                    <h4 class="title device__price-title">48 900 грн*</h4>
+                  </div>
+                  <div class="device__exchange">
+                    <p class="text">Точну ціну слід уточнити у продавця</p>
+                    <button class="btn btn--black device__exchange-btn">
+                      Хочу здійснити обмін
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Вариант 2 -->
+              <div class="device__wrapper hidden">
+                <div class="device__hint">
+                  <h4 class="headline">
+                    Оцінка вашого пристрою вище, ніж вартість пристрою.
+                    <br />
+                    Для обміну потрібно пройти консультацію у менеджера.
+                  </h4>
+                  <button class="btn btn--black device__btn-exchange">
+                    Хочу здійснити обмін
+                  </button>
                 </div>
               </div>
             </div>
@@ -888,6 +968,69 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal--callback">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <h3 class="headline">Замовити дзвінок:</h3>
+          <form class="form form--modal">
+            <div class="form__row">
+              <input type="text" name="name" id="name" placeholder="Ім’я" />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Номер телефону"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Замовити дзвінок</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--callback-auto">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <h3 class="headline">
+            Набридло клікати?
+            <span class="text">Ми тобі зателефонуємо і допоможемо</span>
+          </h3>
+          <form class="form form--modal">
+            <div class="form__row">
+              <input type="text" name="name" id="name" placeholder="Ім’я" />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <div class="form__row">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Номер телефону"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+            <button class="btn btn--black form__btn">Замовити дзвінок</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>

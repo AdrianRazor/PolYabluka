@@ -15,6 +15,7 @@
         &__body {
           grid-template-rows: 1fr;
           overflow: initial;
+          margin-bottom: 20px;
         }
       }
     }
@@ -45,7 +46,9 @@
   }
 
   &__title {
+    letter-spacing: normal;
     color: $white;
+    text-transform: initial;
   }
 
   &__body {
@@ -53,8 +56,6 @@
     grid-template-rows: 0fr;
     overflow: hidden;
     background-color: $light;
-
-    // transition: 0.3s ease;
   }
 
   &__container {
@@ -70,9 +71,23 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
+    overflow-x: auto;
+    padding-bottom: 5px;
+
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+
+      &-thumb {
+        background-color: $light-grey;
+      }
+    }
   }
 
   &__item {
+    min-width: 180px;
     width: 100%;
     height: 50px;
     background-color: $white;
@@ -93,10 +108,9 @@
   }
 
   &__filters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 30px;
 
     margin-top: 30px;
     padding-bottom: 30px;
@@ -120,5 +134,234 @@
     width: 100%;
     height: 100%;
     border-bottom: 2px dashed $light-grey;
+  }
+
+  &__field {
+    margin-top: 30px;
+
+    & input {
+      width: 100%;
+      background-color: $white;
+      border-radius: 99px;
+      padding: 15px 20px;
+      border: 2px solid transparent;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 110%;
+
+      transition: 0.2s ease;
+
+      &:focus {
+        border-color: $aqua;
+      }
+    }
+  }
+
+  &__inner {
+    padding: 30px 0;
+
+    display: flex;
+    gap: 30px;
+  }
+
+  &__img {
+    max-width: 270px;
+    width: 100%;
+    background-color: $white;
+    flex-shrink: 0;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    & .title {
+      letter-spacing: normal;
+    }
+  }
+
+  &__colors {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 20px;
+
+    &-list {
+      display: flex;
+      gap: 15px;
+    }
+
+    &-item {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-top: 20px;
+
+    &-title {
+      letter-spacing: normal;
+      text-transform: initial;
+    }
+
+    & p {
+      color: $grey;
+    }
+  }
+
+  &__exchange {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-top: 50px;
+
+    & p {
+      max-width: 260px;
+      color: $grey;
+    }
+
+    &-btn {
+      max-width: 460px;
+    }
+  }
+
+  &__hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 1279px) {
+  .device {
+    &__head {
+      padding: 15px 0;
+    }
+
+    &__wrapper {
+      padding: 30px 0;
+    }
+
+    &__item {
+      border-width: 1px;
+    }
+
+    &__filters {
+      grid-template-columns: 1fr 1fr;
+
+      margin-top: 20px;
+      border-bottom-width: 1px;
+    }
+
+    &__decor {
+      border-bottom: 1px;
+    }
+
+    &__field {
+      margin-top: 20px;
+
+      & input {
+        border-width: 1px;
+      }
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__exchange {
+      margin-top: 30px;
+
+      &-btn {
+        max-width: 460px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .device {
+    &__container {
+      max-width: 100dvw;
+    }
+
+    &__list {
+      margin: 0 -15px;
+      padding: 0 15px;
+
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+    }
+
+    &__item {
+      min-width: 130px;
+      height: 35px;
+    }
+
+    &__filters {
+      grid-template-columns: initial;
+      gap: 10px;
+
+      padding-bottom: 20px;
+    }
+
+    &__proposition {
+      margin-top: 15px;
+    }
+
+    &__inner {
+      gap: 15px;
+    }
+
+    &__img {
+      max-width: 380px;
+    }
+
+    &__colors {
+      margin-top: 15px;
+
+      &_list {
+        gap: 10px;
+      }
+
+      &-item {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__price {
+      margin-top: 15px;
+    }
+
+    &__exchange {
+      flex-direction: column;
+      align-items: initial;
+      gap: 10px;
+      margin-top: 15px;
+
+      &-btn {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+    }
   }
 }

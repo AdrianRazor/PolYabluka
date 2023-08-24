@@ -413,6 +413,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // device items
+  const deviceItem = document.querySelectorAll(".device__item");
+  if (deviceItem) {
+    deviceItem.forEach((item) => {
+      item.addEventListener("click", () => {
+        deviceItem.forEach((el) => el.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+  }
+
   // splide
   if (document.querySelector(".splideStart")) {
     var splideStart = new Splide(".splideStart", {
