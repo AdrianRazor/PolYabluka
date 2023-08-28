@@ -1,0 +1,32 @@
+.credit-info {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__wrapper {
+    margin-top: 20px;
+
+    & p + p,
+    & p + ul,
+    & ul + p,
+    & ul + ul,
+    & li + li {
+      margin-top: 10px;
+    }
+
+    & li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .credit-info {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &__wrapper {
+      margin-top: 10px;
+    }
+  }
+}
