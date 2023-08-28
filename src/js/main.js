@@ -663,5 +663,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // popular goods section
+  const goodsBtn = document.querySelector(".goods__btn");
+  if (goodsBtn && splideGoods) {
+    goodsBtn.addEventListener("click", () => {
+      splideGoods.destroy();
+      goodsBtn.classList.add("hidden");
+    });
+  }
+
   console.log("DOM fully loaded and parsed");
 });
