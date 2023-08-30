@@ -36,6 +36,11 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+
+    &--upload {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   & input {
@@ -61,6 +66,30 @@
       -moz-appearance: textfield;
     }
 
+    &[type="file"] {
+      display: none;
+    }
+
+    &:focus {
+      border-color: $aqua;
+    }
+  }
+
+  & textarea {
+    width: 100%;
+    height: 126px;
+    background-color: $light;
+    border-radius: 25px;
+    padding: 15px 20px;
+    border: 2px solid transparent;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+
+    resize: none;
+    transition: 0.2s ease;
+
     &:focus {
       border-color: $aqua;
     }
@@ -79,6 +108,47 @@
 
     &.active {
       display: block;
+    }
+  }
+
+  &__upload {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    cursor: pointer;
+
+    &-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $light;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    &-text {
+      max-width: 210px;
+      border-bottom: 1px solid $aqua;
+      padding-bottom: 2px;
+    }
+
+    &-delete {
+      padding: 4px;
+
+      & svg {
+        transition: 0.2s ease;
+      }
+
+      &:hover {
+        & svg {
+          fill: $aqua;
+        }
+      }
     }
   }
 
@@ -167,8 +237,38 @@
       font-size: 12px;
     }
 
+    & textarea {
+      height: 126px;
+      font-size: 12px;
+    }
+
     &__error {
       font-size: 12px;
+    }
+
+    &__upload {
+      gap: 15px;
+
+      &-icon {
+        width: 50px;
+        height: 50px;
+
+        & svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+
+      &-text {
+        max-width: 170px;
+      }
+
+      &-delete {
+        & svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
     }
 
     &__select {

@@ -287,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const cartBtn = document.querySelector("#cart");
   if (modalCart && cartBtn) {
     cartBtn.addEventListener("click", () => {
+      setPaddingRight();
       root.classList.add("lock");
       modalCart.classList.add("open");
     });
@@ -295,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (e.target.classList.contains("modal")) {
         root.classList.remove("lock");
         modalCart.classList.remove("open");
+        deletePaddingRight();
       }
     });
 
@@ -303,6 +305,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     closeBtn.addEventListener("click", () => {
       root.classList.remove("lock");
       modalCart.classList.remove("open");
+      deletePaddingRight();
     });
   }
 
@@ -311,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const loginModalBtn = document.querySelector("#profile-change-login");
   if (modalLogin && loginModalBtn) {
     loginModalBtn.addEventListener("click", () => {
+      setPaddingRight();
       root.classList.add("lock");
       modalLogin.classList.add("open");
     });
@@ -319,6 +323,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (e.target.classList.contains("modal--login")) {
         root.classList.remove("lock");
         modalLogin.classList.remove("open");
+        deletePaddingRight();
       }
     });
 
@@ -327,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     closeBtn.addEventListener("click", () => {
       root.classList.remove("lock");
       modalLogin.classList.remove("open");
+      deletePaddingRight();
     });
   }
 
@@ -335,6 +341,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const passwordModalBtn = document.querySelector("#profile-change-password");
   if (modalPassword && passwordModalBtn) {
     passwordModalBtn.addEventListener("click", () => {
+      setPaddingRight();
       root.classList.add("lock");
       modalPassword.classList.add("open");
     });
@@ -343,6 +350,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       if (e.target.classList.contains("modal--password")) {
         root.classList.remove("lock");
         modalPassword.classList.remove("open");
+        deletePaddingRight();
       }
     });
 
@@ -351,6 +359,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     closeBtn.addEventListener("click", () => {
       root.classList.remove("lock");
       modalPassword.classList.remove("open");
+      deletePaddingRight();
+    });
+  }
+
+  // modal comment
+  const modalComment = document.querySelector(".modal--comment");
+  const historyBtn = document.querySelector(".history__btn");
+  if (historyBtn && modalComment) {
+    historyBtn.addEventListener("click", () => {
+      setPaddingRight();
+      root.classList.add("lock");
+      modalComment.classList.add("open");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal--comment")) {
+        root.classList.remove("lock");
+        modalComment.classList.remove("open");
+        deletePaddingRight();
+      }
+    });
+
+    const closeBtn = modalComment.querySelector(".modal__close");
+
+    closeBtn.addEventListener("click", () => {
+      root.classList.remove("lock");
+      modalComment.classList.remove("open");
+      deletePaddingRight();
     });
   }
 
@@ -661,6 +697,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         el.classList.toggle("active");
       });
     });
+  }
+
+  function setPaddingRight() {
+    let paddingOffset = window.innerWidth - document.body.offsetWidth + "px";
+    document.body.style.paddingRight = paddingOffset;
+  }
+
+  function deletePaddingRight() {
+    document.body.style.paddingRight = 0 + "px";
   }
 
   // popular goods section

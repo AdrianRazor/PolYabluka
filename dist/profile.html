@@ -913,6 +913,64 @@
       </div>
     </div>
 
+    <div class="modal modal--comment">
+      <div class="modal__window">
+        <button class="modal__close">
+          <svg width="22" height="22">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__wrapper">
+          <h3 class="headline">Залишити відгук:</h3>
+          <form class="form">
+            <div class="form__row">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Ваше ім’я"
+              />
+              <p class="form__error">Текст помилки</p>
+            </div>
+
+            <!-- Загрузка фото -->
+            <div class="form__row form__row--upload">
+              <input type="file" name="upload-photo" id="upload-photo" />
+              <label for="upload-photo" class="form__upload">
+                <!-- Если фото нет -->
+                <div class="form__upload-icon">
+                  <svg width="40" height="40">
+                    <use xlink:href="img/sprite.svg#camera"></use>
+                  </svg>
+                </div>
+                <p class="form__upload-text">
+                  При бажанні ви можете завантажити своє фото
+                </p>
+
+                <!-- Если фото нет -->
+                <div class="form__upload-icon hidden">
+                  <img src="img/img-16.jpg" alt="avatar" />
+                </div>
+                <p class="form__upload-text hidden">Змінити своє фото</p>
+              </label>
+              <button class="form__upload-delete hidden">
+                <svg width="36" height="36">
+                  <use xlink:href="img/sprite.svg#delete"></use>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Коммент -->
+            <div class="form__row">
+              <textarea id="comment" placeholder="Ваш відгук"></textarea>
+            </div>
+            <button class="btn btn--black form__btn">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>
